@@ -1,0 +1,44 @@
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.27);
+}
+
+.item img {
+    width: 			100%;
+}
+#myCarousel {
+    margin-top:       3%;
+}
+
+#mainDiv {
+    margin-top: 3%;
+    color: rgb(180,11,26);
+}
+
+#mainDiv h1{
+    text-align: center;
+    color: rgb(180,11,26);
+    font-weight: bold;
+}
+
+#logoQuiSommesNous{
+    width: 20%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.photoConseil {
+    width:200px;
+    height:300px;
+}
+
+.presentation{
+    text-align: center;
+}
+
+#imageConsulterArticle{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}

@@ -1,0 +1,57 @@
+body {
+    background-image:			url("../image/design/fondecran/fond_partenaire.png");
+    background-size: 			100%;
+}
+
+#texte_defilant{
+    background:					rgb(241,138,0);
+    font-weight:				bold;
+
+}
+#texte_defilant span {
+    color:						rgb(255,255,255);
+}
+
+#mainDiv {
+    margin-top: 3%;
+}
+
+#mainDiv h1{
+    text-align: center;
+    color: rgb(241,138,0);
+    font-weight: bold;
+}
+
+.partenaire td{
+    text-align:					center;
+    width:						330px;
+    height:						330px;
+    font-size:					18px;
+}
+
+.partenaire {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button_Asso,#button_partenaires,#button_contact,#button_seConnecter, #button_moncompte {
+    background-size: 			cover;
+    background-position: 		center center;
+    min-height: 				45px;
+}
+
+#button_moncompte{
+    background-image: 			url("../image/design/boutonmenu/button_moncompte.png");
+}
+#button_Asso {
+    background-image: 			url("../image/design/boutonmenu/button_asso.png");
+}
+#button_partenaires {
+    background-image: 			url("../image/design/boutonmenu/button_partenaires.png");
+}
+#button_contact {
+    background-image: 			url("../image/design/boutonmenu/button_contact.png");
+}
+#button_seConnecter {
+    background-image: 			url("../image/design/boutonmenu/button_seConnecter.png");
+}

@@ -1,0 +1,364 @@
+
+
+#container{
+	display: 					block;
+	width:						1000px;
+	margin-left: 				auto;
+    margin-right: 				auto;
+	padding-bottom:				5px;
+	height:						50px;
+	background-color:			rgb(160,8,0);
+	margin-top:					20px;
+	
+}
+
+#nav, #nav ul {
+   padding: 					0;
+   margin: 						0;
+   list-style: 					none; 
+} 
+#nav {
+	display: 					block;
+	font-weight: 				bold; 
+	font-family: 				Arial; 
+	width:						1000px;
+}
+
+#nav a {
+    display: 					block; /* on change le type d'élément, les liens deviennent des balises de type block */
+	padding: 					0; 
+	background-color:			rgb(198,8,0);       
+	color:						rgb(247,255,60);
+	text-decoration:			none;
+	border-style:				solid;
+	border-color:				rgb(198,8,0);
+	font-size: 					22 px; 	
+	
+} 
+#nav a:hover  {
+	color: 						rgb(198,8,0); 
+	background: 				rgb(247,255,60);
+	border-color:				rgb(247,255,60);
+}
+
+#nav li {
+   float: left;
+	width: 120px;
+	height : 50px;
+   text-align:	center;
+}
+#nav li ul li {
+	width: 130px;
+	text-align:	center;
+}
+#nav li ul {
+   position: absolute;
+   
+   left: -999em; 
+} 
+
+#nav li:hover ul {
+   left: auto; 
+}
+
+#nav li:hover ul, #nav li.sfhover ul {
+   left: auto; 
+}
+										/*MES DONNES */
+#banniere {
+	width:						1000px;
+	display: 					block;
+    margin-left: 				auto;
+    margin-right: 				auto;	
+}
+#divmenu {
+	display: 					block;
+	width:						1000px;
+	margin-left: 				auto;
+    margin-right: 				auto;
+	padding-bottom:				5px;
+	height:						22px;
+	background-color:			rgb(219,23,2);
+	margin-top:					20px;
+}
+
+#texte_defilant{
+	background:					rgb(255,90,61);
+	height:						100px;
+	color:						black;
+	font-weight:				bold;
+	width:						1000px;
+	display:					block;
+	margin-left:				auto;
+	margin-right:				auto;
+}
+#texte_defilant span {
+	margin-top:					5px;
+	color:						rgb(255,234,78);
+	font-size:					80px;
+}
+#connexion {
+	margin-left:				auto;
+	margin-right:				auto;
+	background-color:			rgb(39,64,269);
+	color:						white;
+	margin-top:					10px;
+	padding-top:				10px;
+}
+#connexion a{
+	color:						white;
+}
+#ancienlogo {
+	display:					block;
+	margin-left:				auto;
+	margin-right:				auto;
+	padding-top:				5px;
+}
+#atelier {
+	width:						500px;
+	font-family: 				Arial; 
+	font-size:					18px;
+	float:						center;
+	margin-left:				auto;
+	margin-right:				auto;
+	margin-top:					50px;
+	margin-bottom:				250px;
+}
+ #imgatelier1 {
+	position:					relative;
+	float: 						left;
+	margin-left:				75px;
+	margin-top:					40px;
+ }
+  #imgatelier2 {
+	position:					relative;
+	float: 						right;
+	margin-right:				75px;
+	margin-top:					40px;
+ }
+ #imgatelier3 {
+	position:					relative;
+	margin-top:					40px;
+	margin-left: 				75px;
+	float:						left;
+	clear:						left;
+ }
+  #imgatelier4 {
+	position:					relative;
+	margin-top:					40px;
+	margin-right: 				75px;
+	float:						right;
+	clear:						right;
+ }
+  #imgatelier5 {
+	position:					relative;
+	margin-top:					40px;
+	margin-left: 				75px;
+	float:						left;
+	clear:						left;
+ }
+   #imgatelier6 {
+	position:					relative;
+	margin-top:					40px;
+	margin-right: 				75px;
+	float:						right;
+	clear:						right;
+ }
+ #imgatelier7 {
+	position:					relative;
+	margin-top:					40px;
+	margin-left: 				150px;
+	float:						left;
+	
+ }
+ #formulaireinscription {
+	margin-left:				75px;
+ }
+ 
+.monprofil {
+	text-align:					center;
+	margin-left:				auto;
+	margin-right:				auto;
+	margin-top:					20px;
+	border:						solid;
+	border-width:				1px;
+}
+.monprofil td{
+	width:						200px;
+}
+.phototrocafond{
+	max-height:					200px;	
+	max-width:					200px;
+	display:					block;
+	margin-left:				auto;
+	margin-right:				auto;
+}
+.photo_galerie {
+	display:					block;
+	margin-left:				auto;
+	margin-right:				auto;
+	max-width:					230px;
+	max-height:					230px;
+	padding-left:				11px;
+	padding-top:				11px;
+}
+.tdphotogalerie {
+	width:						231px;
+	height:						231px;
+}
+.imagesolo {
+	display:					block;
+	padding-top:				10px;
+	margin-left:				auto;
+	margin-right:				auto;
+}
+.acccommentaire {
+	text-decoration:			none;
+	border:						none;
+	text-decoration:			underline;
+	background-color:			rgb(247,255,60); /* ATTENTION LORS DE L'EDITION DU BACKGROUND*/
+}
+.imagesupprimer{
+	text-decoration:			none;
+	background-image:			url('image/croix_supprimer.jpg');
+	border:						none;
+	width:						50px;
+	height:						50px;
+}
+.miniaturegalerie {
+	text-decoration:			none;
+	border:						none;
+	width:						200px;	
+}	
+.commentaire {
+	display:					block;
+	margin-left:				auto;
+	margin-right:				auto;
+	width:						400px;
+	background-color:			rgb(198,8,0);
+	color:						yellow;
+	padding:					10px;
+	border:						solid;
+	border-color:				black;
+	border-width:				1px;
+	margin-bottom:				20px;
+}
+.article  {
+	background-color:			rgb(255,234,78);
+	width:						1000px;
+	margin-left:				auto;
+	margin-right:				auto;
+	min-height:					1500px;
+}
+.titre_article {
+	text-align:					center;
+	text-decoration:			none;
+	background:					none;
+	border:						none;
+	font-size:					30px;
+	text-decoration:			underline;
+}
+.contenuarticle{
+	font-family:				Arial;
+	padding-left:				20px;
+	padding-right:				20px;
+	text-align:					justify;
+}
+.contenuarticle img{
+	display: 					block;
+    margin-left: 				auto;
+    margin-right: 				auto;
+}
+.form_connexion {
+	margin-left:				auto;
+	margin-right:				auto;
+}
+.presentation {
+	margin-top:					15px;
+	border-collapse: 			collapse;
+}
+.imagepartenaire {
+	width:						250px;
+	height:						250px;
+}
+.titrepartenaire {
+	text-align:					center;
+	color:						rgb(219,23,2);
+	font-weight:				bold;
+	text-decoration:			underline;
+}
+.partenaire td{
+	text-align:					center;
+	width:						330px;
+	height:						330px;
+	font-size:					18px;
+}
+.conseiladmini {
+	color:						rgb(247,255,60);
+	background-color:			rgb(198,8,0);
+	display:					block;
+	width:						1000px;
+	text-align:					center;
+}
+.quisommesnous  {
+	font-size:					18px;
+	padding-bottom:				15px;
+	text-align:					justify;
+	padding-left:				20px;
+	padding-right:				20px;
+}
+.presentation table{
+	font-size:					17px;
+	margin-top:					20px;
+	text-align:					center;
+	height:						370px;
+	width:						300px;
+	font-family: 				Arial; 
+}
+.tablequisommesnous {
+	width:						1000px;
+}
+.trocafond {
+	border:						solid;
+	border-width:				1px;
+	margin-top:					30px;
+	width:						700px;
+}
+.trocafondcolmil {
+	display:					block;
+	width:						129px;
+}
+.gestionrang {
+	text-align:					center;
+}
+.text-description {
+	font-size:					18px;
+	padding-bottom:				15px;
+	text-align:					justify;
+	padding-left:				20px;
+	padding-right:				20px;
+}
+.soustitredescription {
+	color:						rgb(247,255,60);
+	background-color:			rgb(198,8,0);
+	display:					block;
+	width:						1000px;
+	text-align:					center;
+	font-family: 				Arial;
+	margin-top:					50px;
+}
+.dateconseil {
+	font-family: 				Arial;
+}
+p {
+	font-family: 				Arial;
+}
+body {
+	background-color:			rgb(255,255,129);
+}
+.ttpetit	 { font-size: xx-small; }
+.tpetit 		 { font-size: x-small; }
+.petit   		 { font-size: small; }
+.gros   		 { font-size: large; }
+.tgros  		 { font-size: x-large; }
+.ttgros  	 { font-size: xx-large; }
