@@ -43,13 +43,6 @@
 
         echo 'L\'article a été supprimé';
     }
-    if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&!isset($_POST['modifierbandeau'])){ //DEMANDE SI ON SOUHAITE MODIFIER LE BANDEAU
-        echo '<form action="index.php" method="POST"><input type="hidden" name="modifierbandeau" value="true"/><input type="submit" value="Modifier le bandeau"/></form>';
-    }
-    if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['modifierbandeau'])){ //MODIFICATION DU BANDEAU
-        $bandeau = $bandeauManager -> getTextBandeau($_SESSION['rang']);
-        echo '<form action="index.php" method="POST"><table><tr><td>Entrez le texte pour le bandeau</td><td><input type="text" name="nouveaubandeau" value="'.$bandeau->getTextBandeau().'"/></td><td><input type="submit" value="Enregistrez le nouveau texte"/></td></tr></table></form>';
-    }
 
     $nombrearticle= $articleManager -> getNumberArticle();
 
@@ -61,7 +54,7 @@
     } else {
         $nombrearticleaffiche=5;
     }
-    if(isset($_SESSION['ecrireart'])&&$_SESSION['ecrireart']){echo '<a href="redactionarticle.php">Vous pouvez écrire un article</a>';}
+    if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']){echo '<a href="redactionarticle.php"><button class="btn btn-default">Rédiger un article</button></a>';}
 
     $listArticle = $articleManager->getListArticle($nombrearticleaffiche);
 
@@ -70,14 +63,14 @@
         echo '<form method="POST" action="consulterarticle.php"><input type="hidden" name="numeroarticle" value='.$article->getNumeroArticle().'>';
         echo '<table width="col-md-8 col-md-offset-2"><tr>';
         echo '<td><h1 class="titre_article"><input class="titre_article" type="submit" value="'.$article->getTitre().'"></h1></form></td>';
-        if(isset($_SESSION['editerart'])&&$_SESSION['editerart']==true){ //editer un article
+        if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']==true){ //editer un article
             echo '<td width="100px"><form method="POST" action="editionarticle.php">';
             echo '<input type="hidden" name="numeroarticle" value='.$article->getNumeroArticle().'>';
-            echo '<input type="submit" value="Editer cet article"></form></td>';}
-        if(isset($_SESSION['supprimerart'])&&$_SESSION['supprimerart']==true){ //SUPPRIMER UN ARTICLE
+            echo '<input class="btn btn-default" type="submit" value="Editer cet article"></form></td>';}
+        if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']==true){ //SUPPRIMER UN ARTICLE
             echo '<td width="50px"><form method="POST" action="accueil.php">';
             echo '<input type="hidden" name="confsupprimerarticle" value='.$article->getNumeroArticle().'>';
-            echo '<input type="submit" class="imagesupprimer" value=""></form></td>';
+            echo '<input type="submit" class="btn btn-default" value="Supprimer cet article"></form></td>';
         }
 
         echo '</tr></table>';

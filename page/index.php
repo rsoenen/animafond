@@ -31,17 +31,19 @@
 	}
 	
 	include("squelettePage/menu.php"); //MENU PLACER ICI POUR LES CHANGEMENTS DE PERSONNES
-	
-
-	if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&!isset($_POST['modifierbandeau'])){ //DEMANDE SI ON SOUHAITE MODIFIER LE BANDEAU
-		echo '<form action="index.php" method="POST"><input type="hidden" name="modifierbandeau" value="true"/><input type="submit" value="Modifier le bandeau"/></form>';
-	}
-	if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['modifierbandeau'])){ //MODIFICATION DU BANDEAU
-		$bandeau = $bandeauManager -> getTextBandeau($_SESSION['rang']);
-		echo '<form action="index.php" method="POST"><table><tr><td>Entrez le texte pour le bandeau</td><td><input type="text" name="nouveaubandeau" value="'.$bandeau->getTextBandeau().'"/></td><td><input type="submit" value="Enregistrez le nouveau texte"/></td></tr></table></form>';
-	}
-
+      echo '<div id="mainDiv" class= "col-md-8 col-md-offset-2">';
      $listArticle = $articleManager->getListArticle(3);
+
+if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&!isset($_POST['modifierbandeau'])){ //DEMANDE SI ON SOUHAITE MODIFIER LE BANDEAU
+  echo '<form action="index.php" method="POST"><input type="hidden" name="modifierbandeau" value="true"/><input class="btn btn-default" type="submit" value="Modifier le bandeau"/></form>';
+}
+if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['modifierbandeau'])){ //MODIFICATION DU BANDEAU
+  $bandeau = $bandeauManager -> getTextBandeau($_SESSION['rang']);
+  echo '<form action="index.php" class="form-inline" method="POST"><div class="form-group">
+    <label for="textBandeau">Entrez le texte pour le bandeau</label>
+    <input type="text" class="form-control" id="textBandeau" value="'.$bandeau->getTextBandeau().'"/>
+  <input type="submit" class="btn btn-default" value="Enregistrez le nouveau texte"/></form>';
+}
 
 ?>
 	    <!-- Carousel
@@ -111,7 +113,8 @@
     </div><!-- /.carousel -->
 
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><p>test</p>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
 <?php include("squelettePage/footer.php");?>
 </body>
 </html>

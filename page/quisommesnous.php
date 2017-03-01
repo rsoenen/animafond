@@ -42,10 +42,10 @@ Enfin, Anim'à fond, c'est aussi des animations de jonglerie, des animations mé
 			$dateConseilAdministration = $dateConseilAdministrationManager->getDateConseilAdministration();
 			echo '<p class="dateconseil" align="center">Conseil d\'administration élu lors de l\'assemblée générale du '.$dateConseilAdministration->getDateConseil().'</p>';
 			if(isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true&&!isset($_POST['modifierdate'])){
-				echo '<form action="quisommesnous.php" method="POST"><input type="hidden" name="modifierdate" value="true"/><input type="submit" value="modifier la date de l\'AG"/></form>';
+				echo '<form action="quisommesnous.php" method="POST"><input type="hidden" name="modifierdate" value="true"/><input class="btn btn-default" type="submit" value="modifier la date de l\'AG"/></form>';
 			}
 			if(isset($_POST['modifierdate'])){
-				echo 'Le dernier conseil d\'administration s\'est déroulé le <form action="quisommesnous.php" method="POST"><input type="text" name="newdateconseil"/><input type="submit" value="Enregistrer les modifications"></form>';
+				echo 'Le dernier conseil d\'administration s\'est déroulé le <form action="quisommesnous.php" method="POST"><input type="text" name="newdateconseil"/><input type="submit" class="btn btn-default" value="Enregistrer les modifications"/></form>';
 			}
 			
 			echo '<table class="col-md-12" >';$c=0;
@@ -60,7 +60,7 @@ Enfin, Anim'à fond, c'est aussi des animations de jonglerie, des animations mé
 			if ($c!=0){echo '</tr>';}
 			echo '</table>';
 			if (isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){
-				echo '<form action="quisommesnous.php" method="POST"><input type="hidden" name="edition" value="true"><input type="submit" value="Editer les profils"></form>';
+				echo '<form action="quisommesnous.php" method="POST"><input type="hidden"  name="edition" value="true"><input class="btn btn-default" type="submit" value="Editer les profils"></form>';
 			}
 		}
 		else {	//editer profil
@@ -69,7 +69,7 @@ Enfin, Anim'à fond, c'est aussi des animations de jonglerie, des animations mé
 
 			echo '<p align="center">Conseil d\'administration élu lors de l\'assemblée générale du '.$dateConseilAdministration->getDateConseil().'</p>';
 			if(isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){
-			echo '<form action="quisommesnous.php" method="POST"><input type="hidden" name="modifierdate" value="true"/><input type="submit" value="modifier"/></form>';
+			echo '<form action="quisommesnous.php" method="POST"><input type="hidden" name="modifierdate" value="true"/><input class="btn btn-default" type="submit" value="modifier"/></form>';
 			}
 			echo '<table class="tablequisommesnous">';$c=0;
 			foreach ($listeMembreConseil as $data){
@@ -80,15 +80,15 @@ Enfin, Anim'à fond, c'est aussi des animations de jonglerie, des animations mé
 				echo '<tr><td>Prénom</td><td><input type="hidden" name="prenom" value="'.$data->getPrenom().'"/>'.$data->getPrenom().'</td></tr>';
 				echo '<tr><td>Fonction</td><td><input type="text" name="role" value="'.$data->getRole().'"/></td></tr>';
 				echo '<tr><td>Position</td><td><input type="number" name="position" value="'.$data->getPosition().'"/></td></td>';
-				echo '<tr><td colspan="2" text-align="center"><input type="submit" value="Enregistrer les modifications"/></form>';
-				echo '<form action="editerquisommesnous.php" method="POST"><input type="hidden" name="role" value="'.$data->getRole().'"/><input type="hidden" name="nom" value="'.$data->getNom().'"/><input type="hidden" name="image" value="'.$data->getImage().'"/><input type="hidden" name="supprimer" value="true"/><input type="submit" value="Supprimer cette personne"></form></td></tr>';
-				echo '<tr><td colspan="2"><form action="editerquisommesnous.php" method="POST" enctype="multipart/form-data"><p>Changer d\'image<br/><input type="file" name="monfichier"/><br/><input type="hidden" name="updatePicture" value="'.$data->getImage().'"/><input type="hidden" name="role" value="'.$data->getRole().'"/><input type="hidden" name="nom" value="'.$data->getNom().'"/><input type="hidden" value="'.$data->getPrenom().'" name="prenom"/><input type="submit" value="Envoyer le fichier"/></p></form></td></tr>';
+				echo '<tr><td colspan="2" text-align="center"><input type="submit" class="btn btn-default" value="Enregistrer les modifications"/></form>';
+				echo '<form action="editerquisommesnous.php" method="POST"><input type="hidden" name="role" value="'.$data->getRole().'"/><input type="hidden" name="nom" value="'.$data->getNom().'"/><input type="hidden" name="image" value="'.$data->getImage().'"/><input type="hidden" name="supprimer" value="true"/><input type="submit"class="btn btn-default"  value="Supprimer cette personne"></form></td></tr>';
+				echo '<tr><td colspan="2"><form action="editerquisommesnous.php" method="POST" enctype="multipart/form-data"><p>Changer d\'image<br/><input type="file" name="monfichier"/><br/><input type="hidden" name="updatePicture" value="'.$data->getImage().'"/><input type="hidden" name="role" value="'.$data->getRole().'"/><input type="hidden" name="nom" value="'.$data->getNom().'"/><input type="hidden" value="'.$data->getPrenom().'" name="prenom"/><input class="btn btn-default" type="submit" value="Envoyer le fichier"/></p></form></td></tr>';
 				echo '</table></div></td>';$c++;
 				if($c==3){echo '</tr>';$c=0;}
 			}
 			if ($c!=0){echo '</tr>';}
 			echo '</table>';
-			echo '<form method="POST" action="editerquisommesnous.php"><input type="hidden" name="ajouter" value="true"/><input type="submit" value="Ajouter une nouvelle personnne"/></form>';
+			echo '<form method="POST" action="editerquisommesnous.php"><input type="hidden" name="ajouter" value="true"/><input type="submit" class="btn btn-default" value="Ajouter une nouvelle personnne"/></form>';
 		}
 		echo '</div>';
 		include("squelettePage/footer.php");

@@ -8,9 +8,6 @@
 			}
 			if ($colonne != 0){echo '</tr>';}
 			echo '</table>';
-			if(isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){
-				echo '<form action="partenaire.php" method="POST"><input type="hidden" name="editionpartenaire" value="true"/><input type="submit" value="Editer les partenaires"></form>';
-			}
 		}
 		else{ //MODE EDITION
 			echo '<table class="partenaire" >';

@@ -12,6 +12,11 @@
 <?php include("squelettePage/menu.php");?>
 <div class= "col-md-8 col-md-offset-2" id="mainDiv">
 <?php
+
+		if(isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){
+			echo '<form action="partenaire.php" method="POST"><input type="hidden" name="editionpartenaire" value="true"/><input type="submit" class="btn btn-default" value="Editer les partenaires"></form>';
+		}
+
 		include ("../manager/PartenaireManager.php");
 		$partenaireManager = new PartenaireManager();
 		$pathPicture = $partenaireManager -> getPathPicture();
