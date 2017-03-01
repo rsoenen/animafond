@@ -5,13 +5,16 @@
 	<meta charset="utf-8"/>  <!-- norme html 5 -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/style_menu.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_index.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_galerie.css">
+
 	<title> Site d'anima'fond, une association de cirque </title>
 </head>
 <body>
 <?php 
 	include("squelettePage/menu.php");
 ?>
-<div class= "col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-2" id="mainDiv">
 <?php 
 	
 	include ("../manager/GalerieManager.php");

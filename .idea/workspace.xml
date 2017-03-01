@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cd0f077-e196-4e5d-a295-8a6b39ba966e" name="Default" comment="" />
+    <list default="true" id="9cd0f077-e196-4e5d-a295-8a6b39ba966e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style_galerie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/galerie.php" afterPath="$PROJECT_DIR$/page/galerie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/page/voirgalerie.php" afterPath="$PROJECT_DIR$/page/voirgalerie.php" />
+    </list>
     <ignored path="Animafond_v2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -21,34 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="115" column="205" selection-start-line="115" selection-start-column="205" selection-end-line="115" selection-end-column="205" />
-              <folding>
-                <marker date="1488407557969" expanded="true" signature="1891:2179" ph="..." />
-                <marker date="1488407557969" expanded="true" signature="1915:2090" ph="..." />
-                <marker date="1488407557969" expanded="true" signature="1915:2172" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="partenaire.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/partenaire.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="166" selection-start-line="16" selection-start-column="143" selection-end-line="16" selection-end-column="166" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="articles.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/articles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="1224">
               <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="62" />
               <folding>
                 <marker date="1488407986090" expanded="true" signature="4432:4608" ph="..." />
@@ -60,32 +41,75 @@
       <file leaf-file-name="editerquisommesnous.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/editerquisommesnous.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
+            <state relative-caret-position="1037">
               <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quisommesnous.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quisommesnous.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/quisommesnous.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="538">
               <caret line="82" column="106" selection-start-line="82" selection-start-column="106" selection-end-line="82" selection-end-column="106" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gestiondroit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page/gestiondroit.php">
+      <file leaf-file-name="galerie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/galerie.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+            <state relative-caret-position="153">
+              <caret line="120" column="150" selection-start-line="120" selection-start-column="137" selection-end-line="120" selection-end-column="150" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="294" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_galerie.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/style_galerie.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PhotoGalerieManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manager/PhotoGalerieManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1292">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
-                <marker date="1488405890640" expanded="true" signature="2823:3104" ph="..." />
-                <marker date="1488405890640" expanded="true" signature="2827:3104" ph="..." />
+                <marker date="1473325432197" expanded="true" signature="463:560" ph="SELECT numer... photogalerie" />
+                <marker date="1473325432197" expanded="true" signature="874:1018" ph="INSERT INTO `photogalerie`... " />
+                <marker date="1473325432197" expanded="true" signature="1660:1736" ph="DELETE FROM " />
+                <marker date="1473325432197" expanded="true" signature="2017:2119" ph="SELECT `nomP... photogalerie" />
+                <marker date="1473325432197" expanded="true" signature="2364:2427" ph="SELECT nomph... photogalerie" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="voirgalerie.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/voirgalerie.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="31" column="39" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,16 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style_articles.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style_articles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -129,6 +143,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -141,7 +158,6 @@
         <option value="$PROJECT_DIR$/model/Article.php" />
         <option value="$PROJECT_DIR$/page/redactionarticle.php" />
         <option value="$PROJECT_DIR$/page/editerquisommesnous.php" />
-        <option value="$PROJECT_DIR$/page/galerie.php" />
         <option value="$PROJECT_DIR$/page/editerpartenaire.php" />
         <option value="$PROJECT_DIR$/model/Evenement.php" />
         <option value="$PROJECT_DIR$/manager/EvenementManager.php" />
@@ -171,6 +187,10 @@
         <option value="$PROJECT_DIR$/page/partenaire.php" />
         <option value="$PROJECT_DIR$/page/articles.php" />
         <option value="$PROJECT_DIR$/page/quisommesnous.php" />
+        <option value="$PROJECT_DIR$/page/galerie.php" />
+        <option value="$PROJECT_DIR$/manager/PhotoGalerieManager.php" />
+        <option value="$PROJECT_DIR$/page/voirgalerie.php" />
+        <option value="$PROJECT_DIR$/css/style_galerie.css" />
       </list>
     </option>
   </component>
@@ -213,6 +233,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,7 +328,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -401,21 +421,23 @@
       <workItem from="1485688753104" duration="2300000" />
       <workItem from="1488105820741" duration="1869000" />
       <workItem from="1488405117570" duration="3385000" />
+      <workItem from="1488408784561" duration="616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36019000" />
+    <option name="totallyTimeSpent" value="36635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18923241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1913646" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -425,7 +447,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -449,6 +470,24 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -467,29 +506,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manager/PartenaireManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-          <folding>
-            <marker date="1470827448214" expanded="true" signature="357:414" ph="INSERT INTO partenaire... " />
-            <marker date="1470827448214" expanded="true" signature="881:920" ph="SELECT * FRO... partenaire" />
-            <marker date="1470827448214" expanded="true" signature="1370:1451" ph="UPDATE `part... " />
-            <marker date="1470827448214" expanded="true" signature="1836:1905" ph="UPDATE `part... " />
-            <marker date="1470827448214" expanded="true" signature="2242:2285" ph="SELECT * FRO... partenaire" />
-            <marker date="1470827448214" expanded="true" signature="2658:2703" ph="SELECT * FRO... partenaire" />
-            <marker date="1470827448214" expanded="true" signature="3080:3119" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="98" column="70" selection-start-line="98" selection-start-column="70" selection-end-line="98" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Commentaire.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -556,22 +572,6 @@
     <entry file="file://$PROJECT_DIR$/image/design/boutonmenu/button_moncompte.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/galerie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="110" column="141" selection-start-line="110" selection-start-column="129" selection-end-line="110" selection-end-column="141" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/voirgalerie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/editerpartenaire.php">
@@ -697,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4913">
-          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="294" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style_menu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -716,7 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="22" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,7 +824,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
+        <state relative-caret-position="1955">
           <caret line="115" column="205" selection-start-line="115" selection-start-column="205" selection-end-line="115" selection-end-column="205" />
           <folding>
             <marker date="1488407557969" expanded="true" signature="1891:2179" ph="..." />
@@ -845,7 +836,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/gestiondroit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="119">
           <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
           <folding>
             <marker date="1488405890640" expanded="true" signature="2823:3104" ph="..." />
@@ -856,7 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/partenaire.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="272">
           <caret line="16" column="166" selection-start-line="16" selection-start-column="143" selection-end-line="16" selection-end-column="166" />
           <folding />
         </state>
@@ -880,7 +871,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/editerquisommesnous.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
+        <state relative-caret-position="1037">
           <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
           <folding />
         </state>
@@ -888,7 +879,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/articles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="1224">
           <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="62" />
           <folding>
             <marker date="1488407986090" expanded="true" signature="4432:4608" ph="..." />
@@ -898,8 +889,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/quisommesnous.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="538">
           <caret line="82" column="106" selection-start-line="82" selection-start-column="106" selection-end-line="82" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="294" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/galerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="120" column="150" selection-start-line="120" selection-start-column="137" selection-end-line="120" selection-end-column="150" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/PhotoGalerieManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <marker date="1473325432197" expanded="true" signature="463:560" ph="SELECT numer... photogalerie" />
+            <marker date="1473325432197" expanded="true" signature="874:1018" ph="INSERT INTO `photogalerie`... " />
+            <marker date="1473325432197" expanded="true" signature="1660:1736" ph="DELETE FROM " />
+            <marker date="1473325432197" expanded="true" signature="2017:2119" ph="SELECT `nomP... photogalerie" />
+            <marker date="1473325432197" expanded="true" signature="2364:2427" ph="SELECT nomph... photogalerie" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/voirgalerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style_galerie.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding />
         </state>
       </provider>
