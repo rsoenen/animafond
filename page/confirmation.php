@@ -38,8 +38,6 @@
 		} else {
 			echo 'Combinaison pseudo/mot de passe fausse';
 		}
-		
-		
 	}
 
 
