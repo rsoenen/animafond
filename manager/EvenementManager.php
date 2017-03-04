@@ -7,7 +7,7 @@
  * Time: 11:09
  */
 require_once('MainManager.php');
-include('/../model/Evenement.php');
+include(MainManager::$ABSOLUTE_PATH.'/model/Evenement.php');
 
 class EvenementManager extends MainManager
 {

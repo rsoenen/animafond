@@ -1,3 +1,4 @@
+<div id="enTete">
 <div class="row">
 	<?php
 			$url = $_SERVER['PHP_SELF'];
@@ -84,4 +85,5 @@
 
 	</div>
 	</nav> 
+</div>
 </div>

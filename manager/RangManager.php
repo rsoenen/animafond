@@ -1,6 +1,6 @@
 <?php
 	require_once('MainManager.php');
-	include('/../model/Rang.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/Rang.php');
 	
 	class RangManager extends MainManager{
 		
@@ -46,7 +46,7 @@
 		}
 		
 		public function recupererAllRang(){
-			$rangs = [];
+			$rangs = array();
 			
 			$q = $this->_db->prepare("SELECT * FROM `rang` "); 
 			$q->execute();

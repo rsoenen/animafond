@@ -8,9 +8,14 @@
 #myCarousel {
     margin-top:       3%;
 }
+#enTete{
+    background-image:			url("../image/design/fondecran/fond_accueil.png");
+    background-size: 			100%;
+}
 
 #mainDiv {
     margin-top: 3%;
+    background-image:			url("../image/design/fondecran/fond_central.png");
     color: rgb(180,11,26);
 }
 

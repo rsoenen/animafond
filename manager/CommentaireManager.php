@@ -1,7 +1,7 @@
 <?php	
 	
 	require_once('MainManager.php');
-	include('/../model/Commentaire.php');
+	include(MainManager::$ABSOLUTE_PATH.'model/Commentaire.php');
 	
 	class CommentaireManager extends MainManager{
 		
@@ -46,7 +46,7 @@
             $q->bindValue(':numeroarticle', $numeroArticle, PDO::PARAM_INT);
             $q->execute();
 
-            $commentaires = [];
+            $commentaires = array();
 
             while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
                 $newCommentaire = new Commentaire();

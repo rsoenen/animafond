@@ -1,17 +1,17 @@
 <?php	
 
 	require_once('MainManager.php');
-	include('/../model/Bandeau.php');
+	include(MainManager::$ABSOLUTE_PATH.'model/Bandeau.php');
 	
 	class BandeauManager extends MainManager{
 		 		
 		public function changeTextBandeau($bandeau){
 			$q = $this->_db->prepare('UPDATE `bandeau` SET `textBandeau`=:textBandeau, posteur = :posteur');
-			$q->bindValue(':textBandeau', $utilisateur->getTextBandeau(), PDO::PARAM_STR);
-			$q->bindValue(':posteur', $utilisateur->getLastUpdateur(), PDO::PARAM_STR);
+			$q->bindValue(':textBandeau', $bandeau->getTextBandeau(), PDO::PARAM_STR);
+			$q->bindValue(':posteur', $bandeau->getLastUpdateur(), PDO::PARAM_STR);
 			$q->execute();
-			
-			$requete1->execute(array($_POST["nouveaubandeau"]));
+
+            $q->execute();
 		}
 		
 		public function getTextBandeau(){

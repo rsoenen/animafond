@@ -1,7 +1,7 @@
 <?php	
 
 	require_once('MainManager.php');
-	include('/../model/Article.php');
+	include(MainManager::$ABSOLUTE_PATH.'model/Article.php');
 	
 	class ArticleManager extends MainManager{
 		 		
@@ -53,7 +53,7 @@
 		}
 		
 		public function getListArticle ($numberArticle){
-			$articles = [];
+			$articles = array();
 			
 			$q = $this->_db->prepare("SELECT * FROM article WHERE evenement=false ORDER BY dateposte DESC LIMIT :nombrearticleaffiche");
 			$q->bindValue(':nombrearticleaffiche', intval($numberArticle), PDO::PARAM_INT);

@@ -11,9 +11,15 @@ body {
 #texte_defilant span {
     color:						rgb(255,255,255);
 }
+#enTete{
+    background-image:			url("../image/design/fondecran/fond_partenaire.png");
+    background-size: 			100%;
+}
 
 #mainDiv {
     margin-top: 3%;
+    background-image:			url("../image/design/fondecran/fond_central.png");
+
 }
 
 #mainDiv h1{

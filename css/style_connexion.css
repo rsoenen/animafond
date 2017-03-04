@@ -14,8 +14,15 @@ body {
     font-size:					80px;
 }
 
+#enTete{
+    background-image:			url("../image/design/fondecran/fond_connexion.png");
+    background-size: 			100%;
+}
+
 #mainDiv {
     margin-top: 3%;
+    background-image:			url("../image/design/fondecran/fond_central.png");
+
 }
 
 #mainDiv h1{

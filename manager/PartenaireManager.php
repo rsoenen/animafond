@@ -1,6 +1,6 @@
 <?php
 	require_once('MainManager.php');
-	include('/../model/Partenaire.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/Partenaire.php');
 	
 	class PartenaireManager extends MainManager{
 		
@@ -69,7 +69,7 @@
 		}
 		
 		public function listPartenaireByStatut($statut){
-			$listPartenaire= [];
+			$listPartenaire= array();
 			
 			$q = $this->_db->prepare("SELECT * FROM partenaire WHERE statut=:statut;"); 
 			$q->bindValue(':statut', $statut, PDO::PARAM_STR);

@@ -1,6 +1,6 @@
 <?php
 	require_once('MainManager.php');
-	include('/../model/Utilisateur.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/Utilisateur.php');
 	
 	class UtilisateurManager extends MainManager{
 		
@@ -29,7 +29,7 @@
 		}
 		
 		public function getAllUtilisateur(){
-			$utilisateurs = [];
+			$utilisateurs = array();
 			
 			$q = $this->_db->prepare("SELECT * FROM `utilisateur` ORDER BY pseudo ASC"); 
 			$q->execute();

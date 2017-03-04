@@ -3,10 +3,12 @@
 	class MainManager{
 		
 		protected $_db;
+        public static $ABSOLUTE_PATH="../";
 		protected $extensions_autorisees = array('jpg', 'jpeg', 'gif','png','JPG','JPEG','GIF','PNG');
 		private $pathPdf = "../documents/";
         private $pathPictureArticle = '../image/articles/';
         public static $PATH_IMAGE_FOND_ARTICLE = "../image/articles/imageFond/";
+
 		
 		public function __construct(){
 			$this->setDb(new PDO('mysql:host=localhost;dbname=animafond', 'root', ''));

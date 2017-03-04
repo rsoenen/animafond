@@ -1,7 +1,7 @@
 <?php	
 
 	require_once('MainManager.php');
-	include('/../model/Galerie.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/Galerie.php');
 	
 	class GalerieManager extends MainManager{
 		 		
@@ -25,7 +25,7 @@
 		}
 		
 		public function getListGalerie (){
-			$galeries = [];
+			$galeries = array();
 			
 			$q = $this->_db->query('SELECT `evenement`,`nomDossier`  FROM `galerie` ORDER BY `evenement` DESC'); 
 			

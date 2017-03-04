@@ -2,7 +2,7 @@
 
 	require_once('MainManager.php');
 	require_once('GalerieManager.php');
-	include('/../model/PhotoGalerie.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/PhotoGalerie.php');
 	
 	class PhotoGalerieManager extends MainManager{
 		 		
@@ -55,7 +55,7 @@
 		}
 		
 		public function getAllPhotoEvenement($evenement){
-			$photos = [];
+			$photos = array();
 			
 			$q = $this->_db->prepare('SELECT nomphoto  FROM `photogalerie` WHERE evenement=:evenement');
 			$q -> bindValue(':evenement',$evenement, PDO::PARAM_STR);

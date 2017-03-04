@@ -69,7 +69,7 @@
 	
 	<?php  
 
-	$commentaires = [];
+	$commentaires = array();
 	$commentaires=$commentaireManager->getCommentaireByIdArticle($article->getNumeroArticle());
 
 	foreach ($commentaires as $commentaire){

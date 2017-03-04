@@ -1,6 +1,6 @@
 <?php
 	require_once('MainManager.php');
-	include('/../model/Contact.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/Contact.php');
 	
 	class ContactManager extends MainManager{
 		
@@ -17,7 +17,7 @@
 		}
 
 		public function getAllContact(){
-            $cotnacts = [];
+            $cotnacts = array();
 
             $q = $this->_db->prepare("SELECT * FROM contact  ORDER BY datemessage DESC ");
             $q->execute();

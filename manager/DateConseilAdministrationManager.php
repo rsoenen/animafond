@@ -7,7 +7,7 @@
  * Time: 09:59
  */
 require_once('MainManager.php');
-include('/../model/DateConseilAdministration.php');
+include(MainManager::$ABSOLUTE_PATH.'/model/DateConseilAdministration.php');
 
 class DateConseilAdministrationManager extends MainManager{
 
@@ -15,9 +15,12 @@ class DateConseilAdministrationManager extends MainManager{
     public function getDateConseilAdministration(){
         $q = $this->_db->prepare('SELECT * FROM `dateConseilAdministration` WHERE `evenement`=\'conseiladmin\'');
         $q-> execute();
-        $row = $q->fetch();
+
         $conseilAdministration = new DateConseilAdministration();
-        $conseilAdministration ->hydrate($row);
+
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
+            $conseilAdministration->hydrate($donnees);
+        }
 
         return $conseilAdministration;
     }

@@ -3,7 +3,6 @@
 <html>
 <head>
 	<meta charset="utf-8"/>  <!-- norme html 5 -->
-	<!--<link rel="stylesheet" type="text/css" href="style.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/style_menu.css">
     <link rel="stylesheet" type="text/css" href="../css/style_index.css">

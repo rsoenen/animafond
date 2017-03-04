@@ -1,7 +1,7 @@
 <?php	
 
 	require_once('MainManager.php');
-	include('/../model/MembreConseil.php');
+	include(MainManager::$ABSOLUTE_PATH.'/model/MembreConseil.php');
 	
 	class MembreConseilManager extends MainManager{
 		
@@ -34,7 +34,7 @@
 		}
 		
 		public function getListMembreConseil(){
-			$membresConseil = [];
+			$membresConseil = array();
 			
 			$q = $this->_db->prepare("SELECT * FROM membreconseil ORDER BY position ASC"); 
 			$q->execute();
