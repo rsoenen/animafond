@@ -33,7 +33,7 @@
 		}
 	}
 	echo '<h1 class="soustitredescription">Les animations</h1>';
-        echo '<img src="../image/imageExplicative/ani" />';
+        echo '<img  class="image_description"  src="../image/imageExplicative/ani" />';
 	echo '<p class="text-description">Si vous êtes intéressés, pas de problème, on est là ! <a href="contact.php">contactez-nous</a> en indiquant vos coordonnées, et notre président vous contactera.</p>';
 	echo '</div>';
 	include("squelettePage/footer.php");

@@ -20,13 +20,14 @@
 	include_once("../manager/MainManager.php");
 	$mainManager = new mainManager();
 		
-	$pathPDF= $mainManager->getPathPDF();
+	$pathPDF= $mainManager->getPathPDF(); ?>
 
-	echo '<a href="'.$pathPDF.'formulaireinscription.pdf">Formulaire d\'inscription</a>'; ?>
 
-	<img  src="../image/imageExplicative/atelier.gif"/>
-	
-	<div id="formulaireinscription">
+	<img class="image_description" src="../image/imageExplicative/atelier.gif"/>
+
+	<?php	echo '<a href="'.$pathPDF.'formulaireinscription.pdf">Formulaire d\'inscription</a>'; ?>
+
+		<div id="formulaireinscription">
 	<?php
 	if(isset($_SESSION['gererPointAnimation'])&&$_SESSION['gererPointAnimation']==true){
 		echo '<form action="atelier.php" method="POST" enctype="multipart/form-data">';

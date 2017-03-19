@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-#imageConsulterArticle{
+#imageConsulterArticle, .image_description{
     display: block;
     margin-right: auto;
     margin-left: auto;
