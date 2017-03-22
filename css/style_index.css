@@ -41,9 +41,15 @@
     text-align: center;
 }
 
-#imageConsulterArticle, .image_description{
+#imageConsulterArticle{
     display: block;
     margin-right: auto;
     margin-left: auto;
     width: 50%;
+}
+.image_description{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
 }
