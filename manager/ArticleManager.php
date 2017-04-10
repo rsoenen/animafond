@@ -52,12 +52,13 @@
 			return $donnees['nombrearticle'];
 		}
 		
-		public function getListArticle ($numberArticle){
+		public function getListArticle ($numberArticle, $evenement){
 			$articles = array();
 			
-			$q = $this->_db->prepare("SELECT * FROM article WHERE evenement=false ORDER BY dateposte DESC LIMIT :nombrearticleaffiche");
+			$q = $this->_db->prepare("SELECT * FROM article WHERE evenement=:evenement ORDER BY dateposte DESC LIMIT :nombrearticleaffiche");
 			$q->bindValue(':nombrearticleaffiche', intval($numberArticle), PDO::PARAM_INT);
-			$q->execute();
+            $q->bindValue(':evenement', $evenement, PDO::PARAM_BOOL);
+            $q->execute();
 			
 			while ($donnees = $q->fetch(PDO::FETCH_ASSOC)){
 				$newArticle = new Article();

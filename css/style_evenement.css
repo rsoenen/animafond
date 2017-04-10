@@ -1,10 +1,10 @@
 body {
-    background-image:			url("../image/design/fondecran/fond_contact.png");
+    background-image:			url("../image/design/fondecran/fond_evenement.png");
     background-size: 			100%;
 }
 
 #texte_defilant{
-    background:					rgb(225,148,63);
+    background:					rgb(81,55,40);
     font-weight:				bold;
 
 }
@@ -15,7 +15,7 @@ body {
 }
 
 #enTete{
-    background-image:			url("../image/design/fondecran/fond_contact.png");
+    background-image:			url("../image/design/fondecran/fond_evenement.png");
     background-size: 			100%;
 }
 

@@ -11,7 +11,6 @@
 </head>
 <body>
 <?php 
-	echo '<div >';
 	include ("../manager/ArticleManager.php");
 	include ("../manager/BandeauManager.php");
 	include ("../manager/CommentaireManager.php");

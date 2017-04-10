@@ -56,7 +56,7 @@
     }
     if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']){echo '<a href="redactionarticle.php"><button class="btn btn-default">Rédiger un article</button></a>';}
 
-    $listArticle = $articleManager->getListArticle($nombrearticleaffiche);
+    $listArticle = $articleManager->getListArticle($nombrearticleaffiche, false);
 
     foreach ($listArticle as $article){ // récupération des données des articles dans la base de donné, en les mettant dans des tableaux
 
