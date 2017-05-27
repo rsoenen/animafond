@@ -5,26 +5,43 @@
 	<meta charset="utf-8"/>  <!-- norme html 5 -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/style_menu.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_index.css">
 	<title> Site d'anima'fond, une association de cirque </title>
 </head>
 <body>
 	<?php include("squelettePage/menu.php");?>
-	<div class= "col-md-8 col-md-offset-2">
+	<div id="mainDiv" class= "col-md-8 col-md-offset-2">
 		<?php
 			include ("../manager/MembreConseilManager.php");
 			$membreConseilManager = new MembreConseilManager();
 			
-			if(isset($_POST['ajouter'])&&isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){ //AJOUTER UNE NOUVELLE PERSONNE
-				echo '<div class="nouvpresentation"><table><form action="editerquisommesnous.php" method="POST" enctype="multipart/form-data"><table border="1">';
-				echo '<input type="hidden" name="nouveau" value="true">';
-				echo '<tr><td>Nom</td><td><input type="text" name="nom"/></td></tr>';
-				echo '<tr><td>Prenom</td><td><input type="text" name="prenom"/></td></tr>';
-				echo '<tr><td>Fonction</td><td><input type="text" name="role"/></td></tr>';
-				echo '<tr><td>Position</td><td><input type="number" name="position"/></td></tr>';
-				echo '<tr><td>Photo</td><td><input type="file" name="monfichier" /></td></tr>';
-				echo '<tr><td colspan="3" text-align="center"><input type="submit" value="Enregistrer"/></td></tr></form>';
-				echo '</table></div>';	
-			}
+			if(isset($_POST['ajouter'])&&isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){ ?>
+				<div class="nouvpresentation col-md-6 col-md-offset-3"><form action="editerquisommesnous.php" method="POST" enctype="multipart/form-data">
+						<input type="hidden" name="nouveau" value="true">
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="name">Nom</label>
+							<input type="text" name="nom"/>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="prenom">Prenom</label>
+							<input type="text" name="prenom"/>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="role">Fonction</label>
+							<input type="text" name="role"/>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label" for="position">Position</label>
+							<input type="text" name="position"/>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label"for="monfichier">Photo</label>
+							<input type="file" name="monfichier"/>
+						</div>
+				<input type="submit" class="btn btn-default" value="Enregistrer"/></form>
+				</div>
+			<?php
+				}
 			if(isset($_POST['position'])){ //EDITER UN PROFIL EXISTANT
 				
 				$membreUpdate = new MembreConseil();

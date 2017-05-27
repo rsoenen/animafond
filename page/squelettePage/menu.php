@@ -6,7 +6,7 @@
 
 			if ($page == "contact.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_contact.png"/></a>';
-			} else if ($page == "partenaire.php"){
+			} else if ($page == "partenaire.php" || $page =="editerpartenaire.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_partenaire.png"/></a>';
 			} else if ($page == "connexion.php" || $page =="deconnexion.php" || $page == "monprofil.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_connexion.png"/></a>';
@@ -77,9 +77,9 @@
 				}else { ?>
 
 					<li class="dropdown">
-					  <a href="#" class="dropdown-toggle col-md-2" id="button_moncompte" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></span></a>
+					  <a href="#" id="button_seConnecter" class="dropdown-toggle col-md-2" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MON COMPTE</span></a>
 					  <ul class="dropdown-menu">
-						<li><a href="monprofil.php">MON COMPTE</a></li>
+						<li><a href="monprofil.php" id="button_seConnecter">MES INFOS</a></li>
 						<?php
 							if(isset($_SESSION['gererRang'])&&$_SESSION['gererRang']==true){
 								echo "<li><a href=\"gestiondroit.php\">GESTION SITE</a></li>";

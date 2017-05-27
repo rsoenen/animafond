@@ -118,14 +118,6 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
       </div>
     </div>
 
-    <div class="col-md-4" class="rightCollum">
-      <h2>Prochain événement</h2>
-      <p>Nom  : Evenement 1</p>
-      <p>Lieu : Paris</p>
-      <p>Date : 26 Mai</p>
-      <p>Description : Premier événement </p>
-    </div>
-
     <a href="articles.php"><button>Tous nos articles</button></a>
 </div>
 <?php include("squelettePage/footer.php");?>

@@ -11,29 +11,33 @@
 
 <?php if(!isset($_SESSION['pseudo'])){ ?>
 	<form action="confirmation.php"  class="form-horizontal" method="POST">
-		<div class="form-group">
-			<label for="pseudoConnection" class="col-sm-2 control-label">Pseudo :</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" name="pseudoConnection" required="required" value="<?php if(isset($_POST['pseudo'])){echo $_POST['pseudo'];}?>"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="mdp" class="col-sm-2 control-label">Mot de passe :</label>
-			<div class="col-sm-10">
-				<input type="password" class="form-control" name="mdp"/>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<center><button type="submit" class="btn btn-default">Se connecter</button></center>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<center>
-					<a href="inscription.php">S'inscrire</a><br>
-					<a href="motdepasseoublie.php">Mot de passe oublié?</a>
-				</center>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="form-group">
+					<label for="pseudoConnection" class="col-sm-4 control-label">Pseudo :</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" name="pseudoConnection" required="required" value="<?php if(isset($_POST['pseudo'])){echo $_POST['pseudo'];}?>"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="mdp" class="col-sm-4 control-label">Mot de passe :</label>
+					<div class="col-sm-8">
+						<input type="password" class="form-control" name="mdp"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-4 col-sm-8">
+						<center><button type="submit" class="btn btn-default">Se connecter</button></center>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-4 col-sm-8">
+						<center>
+							<a href="inscription.php">S'inscrire</a><br>
+							<a href="motdepasseoublie.php">Mot de passe oublié?</a>
+						</center>
+					</div>
+				</div>
 			</div>
 		</div>
 	</form>

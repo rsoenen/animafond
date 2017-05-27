@@ -68,10 +68,29 @@
 		public function updateRang($pseudo, $rang){
 			$q = $this->_db->prepare("UPDATE `utilisateur` SET `rang`=:rang WHERE `pseudo`=:pseudo;");
 			$q->bindValue(':pseudo', $pseudo, PDO::PARAM_STR);
-			$q->bindValue(':rang', $mail, PDO::PARAM_STR);
+			$q->bindValue(':rang', $rang, PDO::PARAM_STR);
 			$q->execute();
 		}
-		
+
+		public function generateToken($pseudo, $mail){
+            $cle=sha1(md5($_POST['mailutilisateur'].time()."ilovecookie"));
+            $q = $this->_db->prepare('UPDATE `utilisateur` SET `generate_cle` = :cle WHERE `mail`=:mail AND pseudo=:pseudo;');
+            $q->bindParam(':cle', $cle, PDO::PARAM_STR);
+            $q->bindParam(':mail',$mail, PDO::PARAM_STR);
+            $q->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+            $q->execute();
+        }
+
+        public function updateMdpForget($newmdp, $cle){
+            $q = $this->_db->prepare('UPDATE `utilisateur` SET `mdp`=:mdp WHERE generate_cle=:generate_cle');
+            $q->bindParam(':mdp',$newmdp, PDO::PARAM_STR);
+            $q->bindParam(':generate_cle',$cle, PDO::PARAM_STR);
+            $q->execute();
+
+            $q = $this->_db->prepare('UPDATE `utilisateur` SET generate_cle="" WHERE`mdp`=:mdp');
+            $q->bindParam(':mdp',$newmdp, PDO::PARAM_STR);
+            $q->execute();
+        }
 	}
 
 
