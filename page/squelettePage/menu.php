@@ -44,25 +44,21 @@
 </div>
 
 <div class="row">
-	<nav class="navbar col-md-8 col-md-offset-2">
+	<nav class="col-md-8 col-md-offset-2">
 	<div class="container-fluid">
-<!--		<div class="navbar-header">-->
-<!---->
-<!--			<a class="navbar-brand" href="index.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>-->
-<!--		</div>-->
-		
+
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav row">
-			<li class="dropdown">
-			  <a href="#" class="dropdown-toggle col-md-3 button_Asso" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<li>
+			  <a href="#" class="col-md-3 button_Asso" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 				  ASSOCIATION
 			  </a>
 			  <ul class="dropdown-menu">
-				<li><a class="button_Asso" href="quisommesnous.php">QUI SOMMES NOUS</a></li>
-				<li><a class="button_Asso" href="atelier.php">L'ATELIER</a></li>
-				<li><a class="button_Asso" href="animation.php">ANIMATION</a></li>
-				<li><a class="button_Asso" href="monocycle.php">MONOCYCLE</a></li>
-				<li><a class="button_Asso" href="galerie.php">GALERIE</a></li>
+				<li><a class="col-md-3 button_Asso" href="quisommesnous.php">QUI SOMMES NOUS</a></li>
+				<li><a class="col-md-3 button_Asso" href="atelier.php">L'ATELIER</a></li>
+				<li><a class="col-md-3 button_Asso" href="animation.php">ANIMATION</a></li>
+				<li><a class="col-md-3 button_Asso" href="monocycle.php">MONOCYCLE</a></li>
+				<li><a class="col-md-3 button_Asso" href="galerie.php">GALERIE</a></li>
 			  </ul>
 			</li>
 			<?php

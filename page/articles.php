@@ -14,12 +14,10 @@
 
     include ("../manager/ArticleManager.php");
     include ("../manager/BandeauManager.php");
-    include ("../manager/CommentaireManager.php");
 
 
     $articleManager = new ArticleManager();
     $bandeauManager = new BandeauManager();
-    $commentaireManager = new CommentaireManager();
 
     if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['nouveaubandeau'])){ //UPDATE LE NOUVEAU BANDEAU DANS LA BDD
 
@@ -75,14 +73,12 @@
 
         echo '</tr></table>';
         echo '<div class="row">';
-        echo '<img src="../image/articles/imageFond/'.$article->getImage().'" class="col-md-4"/>
-        <p class="contenuarticle col-md-8">'.$article->getPreambule().'</p><br/>';
+        echo '<img src="../image/articles/imageFond/'.$article->getImage().'" class="col-md-offset-1 col-md-4"/>
+        <p class="contenuarticle col-md-offset-1 col-md-6">'.$article->getPreambule().'</p><br/>';
         echo '<form action="consulterarticle.php" method="POST"><input type="hidden" name="numeroarticle" value="'.$article->getNumeroArticle().'"/>
-        <input type="submit" class="btn btn-lg btn-primary" value="Lire l\'article"></form>';
+        <input type="submit" class="col-md-offset-1 col-md-2 btn btn-lg btn-primary" value="Lire l\'article"></form>';
 
-        $numberCommentaire = $commentaireManager->numberCommentaireArticle($article->getNumeroArticle());
         echo '<form method="POST" action="consulterarticle.php"><input type="hidden" name="numeroarticle" value='.$article->getNumeroArticle().'>';
-        if($numberCommentaire>1){echo '<input class="acccommentaire" type="submit" value="Il y a '.$numberCommentaire.' commentaires"/>';}else{echo '<input class="acccommentaire" type="submit" value="Il y a '.$numberCommentaire.' commentaire"/>';}
         echo '</form></div>';
     }
 

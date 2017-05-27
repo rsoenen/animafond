@@ -5,9 +5,17 @@
 .item img {
     width: 			100%;
 }
-#myCarousel {
+#myCarousel, #reseauSociaux {
     margin-top:       3%;
 }
+
+.rightCollum h2{
+    text-align: center;
+}
+.rightCollum {
+    margin-bottom: 3%;
+}
+
 #enTete{
     background-image:			url("../image/design/fondecran/fond_accueil.png");
     background-size: 			100%;

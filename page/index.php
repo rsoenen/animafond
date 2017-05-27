@@ -30,7 +30,7 @@
 	
 	include("squelettePage/menu.php"); //MENU PLACER ICI POUR LES CHANGEMENTS DE PERSONNES
       echo '<div id="mainDiv" class= "col-md-8 col-md-offset-2">';
-     $listArticle = $articleManager->getListArticle(3);
+     $listArticle = $articleManager->getListArticle(3, false);
 
 if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&!isset($_POST['modifierbandeau'])){ //DEMANDE SI ON SOUHAITE MODIFIER LE BANDEAU
   echo '<form action="index.php" method="POST"><input type="hidden" name="modifierbandeau" value="true"/><input class="btn btn-default" type="submit" value="Modifier le bandeau"/></form>';
@@ -46,7 +46,7 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
 ?>
 	    <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="col-md-8 col-md-offset-2 carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="col-md-8 carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -110,8 +110,23 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
       </a>
     </div><!-- /.carousel -->
 
+    <div class="col-md-4" class="rightCollum">
+        <h2>Nous joindre</h2>
+      <div class="row">
+        <img src="../image/design/iconefacebook.png" class="icone col-md-2">
+        <a href="https://www.facebook.com/anima.fond">Compte d'animafond</a>
+      </div>
+    </div>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div class="col-md-4" class="rightCollum">
+      <h2>Prochain événement</h2>
+      <p>Nom  : Evenement 1</p>
+      <p>Lieu : Paris</p>
+      <p>Date : 26 Mai</p>
+      <p>Description : Premier événement </p>
+    </div>
+
+    <a href="articles.php"><button>Tous nos articles</button></a>
 </div>
 <?php include("squelettePage/footer.php");?>
 </body>
