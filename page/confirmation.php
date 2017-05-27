@@ -33,7 +33,7 @@
 			$rangManager -> updateDroit($_SESSION['rang']);
 			
 			$utilisateurManager-> updateLastConnexion($utilisateur);
-			echo "<p align='center'>Vous êtes bien connecté sous le pseudo de ".$_SESSION['pseudo'].".<br/>";
+			echo "<p align='center'>Vous êtes bien connect&eacute; sous le pseudo de ".$_SESSION['pseudo'].".<br/>";
 			echo "<a href='index.php'>Retourner à l'accueil</a></p>";
 		} else {
 			echo 'Combinaison pseudo/mot de passe fausse';

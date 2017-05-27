@@ -23,7 +23,7 @@
 
 	if(isset($_SESSION['supprimercom'])&&($_SESSION['supprimercom']==true)&&isset($_POST['supprimercecom'])){ //SUPPRIMER UN COMMENTAIRE
 			$commentaireManager->deleteCommentaire($_POST['numeroarticle'],$_POST['supprimercecom']);
-			echo '<u><strong>Le commentaire a bien été supprimé.</strong></u>';
+			echo '<u><strong>Le commentaire a bien &eacute;t&eacute; supprim&eacute;.</strong></u>';
 		}
 		if(isset($_POST['ajoutcom'])&&isset($_POST['contenucom'])){ //ECRITURE DANS LA BDD DU COMMENTAIRE 
 
@@ -41,7 +41,7 @@
 				$newCommentaire->setAuteur($_POST['pseudo']);
 			}
 			$commentaireManager->add($newCommentaire);
-			echo 'Votre commentaire a bien été ajouté';
+			echo 'Votre commentaire a bien &eacute;t&eacute; ajout&eacute;';
 			
 		}
 
@@ -74,7 +74,7 @@
 
 	foreach ($commentaires as $commentaire){
 		echo '<div class="commentaire">';
-		echo '<table><tr><td><u><b>Article écrit par '.htmlspecialchars($commentaire->getAuteur()).' le '.$commentaire->getDatePoste().'</b></u></td>';
+		echo '<table><tr><td><u><b>Article &eacute;crit par '.htmlspecialchars($commentaire->getAuteur()).' le '.$commentaire->getDatePoste().'</b></u></td>';
 		if(isset($_SESSION['supprimercom'])&&$_SESSION['supprimercom']==true){
 			echo '<td><form method="POST" action="consulterarticle.php">';
 			echo '<input type="hidden" name="numeroarticle" value="'.$commentaire->getNumeroCommentaire().'"/>';

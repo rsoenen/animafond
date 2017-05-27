@@ -13,7 +13,7 @@
 	session_destroy();
 	include("squelettePage/menu.php");
 	echo '<div class= "col-md-8 col-md-offset-2">';
-	echo "Vous avez bien été déconnecté.";
+	echo "Vous avez bien &eacute;t&eacute; d&eacute;connect&eacute;.";
 	include("squelettePage/footer.php");
 ?>
 </div>

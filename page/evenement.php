@@ -35,10 +35,10 @@
 		$requete2->bindParam(':numeroArticle', $_POST['supprimerarticle'], PDO::PARAM_INT);
 		$requete2->execute();
 		
-		echo 'L\'article a été supprimé';
+		echo 'L\'article a &eacute;t&eacute; supprim&eacute;';
 	}
 		
-		if(isset($_SESSION['ecrireart'])&&$_SESSION['ecrireart']){echo '<a href="ajouterArticleEvenement.php">Vous pouvez écrire un article</a>';}
+		if(isset($_SESSION['ecrireart'])&&$_SESSION['ecrireart']){echo '<a href="ajouterArticleEvenement.php">Vous pouvez &eacute;crire un article</a>';}
 		$listArticle = $articleManager->getListArticle(1, true);
 
 		foreach ($listArticle as $article){

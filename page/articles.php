@@ -39,7 +39,7 @@
         $articleManager -> deleteArticle($_POST['supprimerarticle']);
         $commentaireManager -> deleteAllCommentaireArticle($_POST['supprimerarticle']);
 
-        echo 'L\'article a été supprimé';
+        echo 'L\'article a &eacute;t&eacute; supprim&eacute;';
     }
 
     $nombrearticle= $articleManager -> getNumberArticle();
@@ -52,7 +52,7 @@
     } else {
         $nombrearticleaffiche=5;
     }
-    if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']){echo '<a href="redactionarticle.php"><button class="btn btn-default">Rédiger un article</button></a>';}
+    if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']){echo '<a href="redactionarticle.php"><button class="btn btn-default">R&eacute;diger un article</button></a>';}
 
     $listArticle = $articleManager->getListArticle($nombrearticleaffiche, false);
 

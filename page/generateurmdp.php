@@ -19,10 +19,10 @@
 				$utilisateurManager=new UtilisateurManager();
 				$utilisateurManager->updateMdpForget($_POST['newmdp'], $_GET['cle']);
 
-				echo 'Mot de passe modifié';
+				echo 'Mot de passe modifi&eacute;';
 				}
 				else {
-					echo '<b>Les deux mots de passes que vous avez rentré ne sont pas identiques.</b>';
+					echo '<b>Les deux mots de passes que vous avez rentr&eacute; ne sont pas identiques.</b>';
 			}	
 		} else if (isset($_POST['newmdp'])&&strlen($_POST['newmdp'])<6){
 			echo '<b>Votre mot de passe doit faire au minimum 6 caractères.</b>';

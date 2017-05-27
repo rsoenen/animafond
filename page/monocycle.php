@@ -13,27 +13,27 @@
 	<?php include("squelettePage/menu.php");?>
 	<div class= "col-md-8 col-md-offset-2" id="mainDiv">
 		<h1 id="monocycle" class="soustitredescription">Monocycle Sportif</h1>
-		<img class="image_description" src="../image/imageExplicative/monocycle.gif" alt="Texte décrivant la pratique du monocycle">
+		<img class="image_description" src="../image/imageExplicative/monocycle.gif" alt="Texte d&eacute;crivant la pratique du monocycle">
 		 
 		<h1 id="mono-basket" class="soustitredescription">Mono-basket</h1>
-		<img class="image_description" src="../image/imageExplicative/monobasket.gif" alt="Texte décrivant la pratique du mono-basket">
-		<a href="../documents/Reglement_monobasket.pdf">Réglement mono-basket</a>
+		<img class="image_description" src="../image/imageExplicative/monobasket.gif" alt="Texte d&eacute;crivant la pratique du mono-basket">
+		<a href="../documents/Reglement_monobasket.pdf">R&eacute;glement mono-basket</a>
 
 		<h1 id="trial" class="soustitredescription">Trial</h1>
-		<img class="image_description" src="../image/imageExplicative/trial.gif" alt="Texte décrivant la pratique du trial">
+		<img class="image_description" src="../image/imageExplicative/trial.gif" alt="Texte d&eacute;crivant la pratique du trial">
 		 
 
 
 		<h1 id ="mono-hockey"class="soustitredescription">Mono-hockey</h1>
-		<img class="image_description" src="../image/imageExplicative/monohockey.gif" alt="Texte décrivant la pratique du mono-hockey">
-		<a href="../documents/Reglement_mono-hockey.pdf">Réglement mono-hockey</a>
+		<img class="image_description" src="../image/imageExplicative/monohockey.gif" alt="Texte d&eacute;crivant la pratique du mono-hockey">
+		<a href="../documents/Reglement_mono-hockey.pdf">R&eacute;glement mono-hockey</a>
 
 		<h1 id ="freestyle"class="soustitredescription">Freestyle</h1>
-		<img  class="image_description" src="../image/imageExplicative/freestyle.gif" alt="Texte décrivant la pratique du free-style">
+		<img  class="image_description" src="../image/imageExplicative/freestyle.gif" alt="Texte d&eacute;crivant la pratique du free-style">
 
 
-		<h1 id ="athletisme"class="soustitredescription">Athlétisme</h1>
-		<img  class="image_description"  src="../image/imageExplicative/athletisme.gif" alt="Texte décrivant la pratique de l'athlétisme sur monocycle">
+		<h1 id ="athletisme"class="soustitredescription">Athl&eacute;tisme</h1>
+		<img  class="image_description"  src="../image/imageExplicative/athletisme.gif" alt="Texte d&eacute;crivant la pratique de l'athl&eacute;tisme sur monocycle">
 
 
 		<a href="../documents/lesprotectionsmonocycle.pdf">Information sur les protections</a>

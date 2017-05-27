@@ -17,7 +17,7 @@
 	<?php 
 		if(!isset($_SESSION['pseudo'])){
 			echo 	'<div class="form-group">
-						<label for="name" class="col-sm-2 control-label">Nom et prénom :</label>
+						<label for="name" class="col-sm-2 control-label">Nom et pr&eacute;nom :</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" name="name" required="required"/>
 						</div>

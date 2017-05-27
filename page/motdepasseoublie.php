@@ -52,16 +52,16 @@
 	
 	
 ?>
-		<div class=""col-md-6 col-md-offset-3">
+		<div class="col-md-6 col-md-offset-3">
 		<h2>MOT DE PASSE OUBLI&Eacute;?</h2>
 		<form method="POST" action="motdepasseoublie.php">
 
 			<div class="form-group">
-				<label class="col-sm-2 control-label" for="pseudo">Entrez votre pseudo</label>
+				<label class="col-sm-4 control-label" for="pseudo">Entrez votre pseudo</label>
 				<input type="text" name="pseudo"/>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-2 control-label" for="mailutilisateur">Entrez votre adresse mail</label>
+				<label class="col-sm-4 control-label" for="mailutilisateur">Entrez votre adresse mail</label>
 				<input type="mail" name="mailutilisateur"/>
 			</div>
 			<input type="submit" class="btn btn-default" value="Valider"/>

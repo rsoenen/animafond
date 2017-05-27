@@ -41,7 +41,7 @@
 			$rangManager -> updateRang($updatedRang);
 			
 			$rangManager -> updateDroit($_SESSION['rang']);
-			echo 'Modification effectuée';
+			echo 'Modification effectu&eacute;e';
 			
 		}
 
@@ -61,22 +61,22 @@
 			
 			$rangManager -> addRang($newRang);
 			
-			echo 'Le nouveau rang a été ajouté';
+			echo 'Le nouveau rang a &eacute;t&eacute; ajout&eacute;';
 		}
 		if(isset($_POST['modifierRang'])){ //MODIFICATION DU RANG D'UN UTILISATEUR
 			
 			$utilisateurManager -> updateRang($_POST['modifierRang'], $_POST['newRang']);
 			
-			echo 'Le rang de '.$_POST['modifierRang'].' été modifié';
+			echo 'Le rang de '.$_POST['modifierRang'].' &eacute;t&eacute; modifi&eacute;';
 		}
 		
 		$rangs = $rangManager -> recupererAllRang();
 		
 		
-		echo '<br/><table border="1"><tr><td>Rang</td><td>Gérer les événements</td><td>Gérer les commentaires</td>
-		<td>Gérer les articles</td><td>Gérer les pages annexes</td><td>Gérer TrocAFond</td>
-		<td>Gérer les rangs</td><td>Gérer le bandeau</td><td>Gérer la galerie</td>
-		<td>Gérer le point animation</td></tr>';
+		echo '<br/><table border="1"><tr><td>Rang</td><td>G&eacute;rer les &eacute;v&eacute;nements</td><td>G&eacute;rer les commentaires</td>
+		<td>G&eacute;rer les articles</td><td>G&eacute;rer les pages annexes</td><td>G&eacute;rer TrocAFond</td>
+		<td>G&eacute;rer les rangs</td><td>G&eacute;rer le bandeau</td><td>G&eacute;rer la galerie</td>
+		<td>G&eacute;rer le point animation</td></tr>';
 		
 		foreach($rangs as $data){
 			if($data-> getNomRang() =='admin'){ //RANG ADMIN AFFICHER MAIS NON MODIFIABLE
@@ -142,7 +142,7 @@
 		}
 		
 		echo '</table><br/>';
-		echo '<a href="gestionenvcontact.php">Gérer les messages envoyés par la section contact</a>';
+		echo '<a href="gestionenvcontact.php">G&eacute;rer les messages envoy&eacute;s par la section contact</a>';
 		
 		
 
@@ -153,21 +153,21 @@
 				$updatedEvenement->setNomEvenement($_POST['nomevenement']);
 				$updatedEvenement->setVisible($_POST['visible']);
 				$evenementManager->updateEvenement($updatedEvenement);
-				echo "L'événement a bien été modifié";
+				echo "L'&eacute;v&eacute;nement a bien &eacute;t&eacute; modifi&eacute;";
 			}
 
 			$evenement= new Evenement();
 			$evenement = $evenementManager->getEvenement();
 
 			echo '<form action="gestiondroit.php" method="POST">';
-			echo '<table><tr><td>Nom de l\'événement: </td><td><input type="text" value="'.$evenement->getNomEvenement().'"" name="nomevenement"/></td></tr>';
+			echo '<table><tr><td>Nom de l\'&eacute;v&eacute;nement: </td><td><input type="text" value="'.$evenement->getNomEvenement().'"" name="nomevenement"/></td></tr>';
 			echo '<tr><td>Visible sur le site: </td><td><INPUT type= "radio" ';if($evenement->isVisible()){echo ' checked';} echo ' name="visible" value=1/>OUI<INPUT type= "radio" name="visible" ';if(!$evenement->isVisible()){echo ' checked';} echo ' value="false"/>NON </td></tr>';
 			echo '<tr><td colapse="2"><input type="submit" Value="Enregistrer les modifications"/></td></tr>';
 			echo '</table></form>';
 
 		}
 	} else { //SI LA PERSONNE N'A PAS LE DROIT D'ACCEDER A CETTE PAGE
-		echo '<h1>Vous n\'avez pas les droits nécessaires pour consulter cette page !!!</h1>';
+		echo '<h1>Vous n\'avez pas les droits n&eacute;cessaires pour consulter cette page !!!</h1>';
 		echo '<a href="accueil.php">Retourner à l\'accueil</a>';
 	}
 	include("squelettePage/footer.php");

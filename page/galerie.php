@@ -32,7 +32,7 @@
 		$newGalerie -> setCreateurGalerie($_SESSION['pseudo']);
 		$galerieManager->addGalerie($newGalerie);
 		
-		echo 'Evenement ajouté';
+		echo 'Evenement ajout&eacute;';
 	}
 	
 	if(isset($_SESSION['gererGalerie'])&&$_SESSION['gererGalerie']==true&&isset($_POST['supprimerphoto'])){ //REQUETE POUR SUPPRIMER UNE PHOTO
@@ -42,7 +42,7 @@
 		$photoDelete -> setNomPhoto($_POST['supprimerphoto']);
 		$photoGalerieManager-> deletePhoto($photoDelete);
 		
-		echo 'Photo supprimée';
+		echo 'Photo supprim&eacute;e';
 		
 	}
 	if(isset($_SESSION['gererGalerie'])&&$_SESSION['gererGalerie']==true){ //AJOUT D'UNE PHOTO DANS UN EVENEMENT
@@ -58,16 +58,16 @@
 				$photoGalerieManager -> addPhoto($newPhoto, $nomfichier);
 			}
 			
-			echo 'Photo(s) ajoutée(s)';
+			echo 'Photo(s) ajout&eacute;e(s)';
 		}
 	}
 	
 	
 	
 	if(isset($_SESSION['gererGalerie'])&&$_SESSION['gererGalerie']==true){ //DEMANDE POUR AJOUTER UN EVENEMENT ET POUR PASSER EN MODE EDITION
-		echo '<form action="galerie.php" method="POST"><table><tr><td>Ajouter un événement</td><td><input type="text" name="addevenement"/></td><td><input type="submit" value="Ajouter un évenement"></td></tr></table></form>';
-		if(isset($_POST['passermodeedition'])&&($_POST['passermodeedition']=='true')){echo '<form action="galerie.php" method="POST"><input type="hidden" name="passermodeedition" value="false"/>';if(isset($_POST['choixevenement'])){echo '<input type="hidden" name="choixevenement" value="'.$_POST['choixevenement'].'"/>';}echo '<input type="submit" value="Quitter le mode édition"></form>';}
-		else{echo '<form action="galerie.php" method="POST"><input type="hidden" name="passermodeedition" value="true"/>';if(isset($_POST['choixevenement'])){echo '<input type="hidden" name="choixevenement" value="'.$_POST['choixevenement'].'"/>';}echo '<input type="submit" value="Passez en mode édition"></form>';}
+		echo '<form action="galerie.php" method="POST"><table><tr><td>Ajouter un &eacute;v&eacute;nement</td><td><input type="text" name="addevenement"/></td><td><input type="submit" value="Ajouter un &eacute;venement"></td></tr></table></form>';
+		if(isset($_POST['passermodeedition'])&&($_POST['passermodeedition']=='true')){echo '<form action="galerie.php" method="POST"><input type="hidden" name="passermodeedition" value="false"/>';if(isset($_POST['choixevenement'])){echo '<input type="hidden" name="choixevenement" value="'.$_POST['choixevenement'].'"/>';}echo '<input type="submit" value="Quitter le mode &eacute;dition"></form>';}
+		else{echo '<form action="galerie.php" method="POST"><input type="hidden" name="passermodeedition" value="true"/>';if(isset($_POST['choixevenement'])){echo '<input type="hidden" name="choixevenement" value="'.$_POST['choixevenement'].'"/>';}echo '<input type="submit" value="Passez en mode &eacute;dition"></form>';}
 	}
 	
 	$listGalerie = $galerieManager -> getListGalerie ();
@@ -97,7 +97,7 @@
 		$evenementchoisi=$_POST['choixevenement'];
 		if(isset($_SESSION['gererGalerie'])&&$_SESSION['gererGalerie']==true){ //DEMANDE POUR AJOUTER UNE PHOTO A L'EVENEMENT CHOISI
 			echo '<form action="galerie.php" method="POST" enctype="multipart/form-data"><div id="mesinput">'
-                                . '<p>Ajouter une ou des photos pour l\'évenement : '.$evenementchoisi.'.</p>'
+                                . '<p>Ajouter une ou des photos pour l\'&eacute;venement : '.$evenementchoisi.'.</p>'
                                 . '<label for="monfichier1" >Image 1:</label>'
                                 . '<input type="file" id="monfichier1" name="monfichier1"/><br/></div>'
                                 . '<input type="hidden" id="nombrelien" name="nombrelien" value="1" />'

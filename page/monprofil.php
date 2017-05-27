@@ -37,15 +37,15 @@
 				echo '<p align="center"><u>Mot de passe modifié</u></p>';
 			}
 			else if(!isset($_POST['newmdp'])){
-				echo '<p align="center">Vous n\'avez pas rentré de mot de passe</p>';
+				echo '<p align="center">Vous n\'avez pas rentr&eacute; de mot de passe</p>';
 				$_POST['modifiermdp']=true;
 			}
 			else if($verifmdp!=$row2['mdp']){
-				echo '<p align="center">Le mot de passe que vous avez rentré ne correspond pas à votre mot de passe actuel</p>';
+				echo '<p align="center">Le mot de passe que vous avez rentr&eacute; ne correspond pas à votre mot de passe actuel</p>';
 				$_POST['modifiermdp']=true;
 			}
 			else if($_POST['newmdp']!=$_POST['newmdpconf']){
-				echo '<p align="center">Les deux mots de passes que vous avez rentrés sont différents. Merci de rentrer deux fois votre nouveau mot de passe</p>';
+				echo '<p align="center">Les deux mots de passes que vous avez rentr&eacute;s sont diff&eacute;rents. Merci de rentrer deux fois votre nouveau mot de passe</p>';
 				$_POST['modifiermdp']=true;
 			}
 			else if(strlen($_POST['newmdp'])<6){
@@ -84,7 +84,7 @@
 		
 		
 	} else {
-		echo 'Vous devez vous connecter pour accéder à cette page';
+		echo 'Vous devez vous connecter pour acc&eacute;der à cette page';
 	}
 	
 	include("squelettePage/footer.php");

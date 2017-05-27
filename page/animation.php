@@ -21,7 +21,7 @@
 		$pathPDF= $mainManager->getPathPDF();
 		
 		echo '<h1 class="soustitredescription">Points animations</h1>';
-		echo '<a href="'.$pathPDF.'pointanimation.pdf">Vous trouverez ici le récapitulatif des points animations</a>';
+		echo '<a href="'.$pathPDF.'pointanimation.pdf">Vous trouverez ici le r&eacute;capitulatif des points animations</a>';
 		if(isset($_SESSION['gererPointAnimation'])&&$_SESSION['gererPointAnimation']==true){
 			echo '<form action="animation.php" method="POST" enctype="multipart/form-data">';
 			echo '<input type="file" name="monfichier"/>';
@@ -34,7 +34,7 @@
 	}
 	echo '<h1 class="soustitredescription">Les animations</h1>';
         echo '<img  class="image_description"  src="../image/imageExplicative/ani" />';
-	echo '<p class="text-description">Si vous êtes intéressés, pas de problème, on est là ! <a href="contact.php">contactez-nous</a> en indiquant vos coordonnées, et notre président vous contactera.</p>';
+	echo '<p class="text-description">Si vous êtes int&eacute;ress&eacute;s, pas de problème, on est là ! <a href="contact.php">contactez-nous</a> en indiquant vos coordonn&eacute;es, et notre pr&eacute;sident vous contactera.</p>';
 	echo '</div>';
 	include("squelettePage/footer.php");
 	

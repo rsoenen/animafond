@@ -28,7 +28,7 @@
 			if($c1==$c){
 				$cond5=true;
 			} else{
-				echo "<u><b>Le pseudo que vous voulez prendre est déjà utiliser</b></u><br/>";
+				echo "<u><b>Le pseudo que vous voulez prendre est d&eacute;jà utiliser</b></u><br/>";
 			}
 		}
 		$cond1=$cond2=$cond3=$cond4=true;
