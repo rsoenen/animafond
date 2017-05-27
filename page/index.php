@@ -3,9 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8"/>  <!-- norme html 5 -->
+  <link rel="stylesheet" type="text/css" href="../css/style_menu.css">
+  <link rel="stylesheet" type="text/css" href="../css/style_index.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../css/style_menu.css">
-    <link rel="stylesheet" type="text/css" href="../css/style_index.css">
+
 
 	<title> Site d'anima'fond, une association d'art du cirque et de monocycle</title>
 </head>

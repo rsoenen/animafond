@@ -17,15 +17,15 @@
 	<?php 
 	include ("../manager/RangManager.php");
 	include ("../manager/UtilisateurManager.php");
-	include ("../manager/EvenementManager.php");
-	
+	include_once ("../manager/EvenementManager.php");
+
 	$rangManager = new RangManager();
 	$utilisateurManager = new UtilisateurManager();
 	$evenementManager= new EvenementManager();
 	
 	if(isset($_SESSION['gererRang'])&&$_SESSION['gererRang']==true){
 		if(isset($_POST['nomRang'])){ //EDITION DE LA BDD POUR LES DROITS DES DIFFERENTS RANGS
-			
+
 			$updatedRang = new Rang();
 			$updatedRang -> setNomRang($_POST['nomRang']);
 			$updatedRang -> setGererEvenement($_POST['gererEvenement']);
@@ -37,16 +37,16 @@
 			$updatedRang -> setGererBandeau($_POST['gererBandeau']);
 			$updatedRang -> setGererGalerie($_POST['gererGalerie']);
 			$updatedRang -> setGererPointAnimation($_POST['gererPointAnimation']);
-			
+
 			$rangManager -> updateRang($updatedRang);
-			
+
 			$rangManager -> updateDroit($_SESSION['rang']);
 			echo 'Modification effectu&eacute;e';
-			
+
 		}
 
 		if(isset($_POST['nouvNomRang'])){ //AJOUT A LA BDD UN NOUVEAU RANG
-			
+
 			$newRang = new Rang();
 			$newRang -> setNomRang($_POST['nouvNomRang']);
 			$newRang -> setGererEvenement($_POST['gererEvenement']);
@@ -58,26 +58,26 @@
 			$newRang -> setGererBandeau($_POST['gererBandeau']);
 			$newRang -> setGererGalerie($_POST['gererGalerie']);
 			$newRang -> setGererPointAnimation($_POST['gererPointAnimation']);
-			
+
 			$rangManager -> addRang($newRang);
-			
+
 			echo 'Le nouveau rang a &eacute;t&eacute; ajout&eacute;';
 		}
 		if(isset($_POST['modifierRang'])){ //MODIFICATION DU RANG D'UN UTILISATEUR
-			
+
 			$utilisateurManager -> updateRang($_POST['modifierRang'], $_POST['newRang']);
-			
+
 			echo 'Le rang de '.$_POST['modifierRang'].' &eacute;t&eacute; modifi&eacute;';
 		}
-		
+
 		$rangs = $rangManager -> recupererAllRang();
-		
-		
+
+
 		echo '<br/><table border="1"><tr><td>Rang</td><td>G&eacute;rer les &eacute;v&eacute;nements</td><td>G&eacute;rer les commentaires</td>
 		<td>G&eacute;rer les articles</td><td>G&eacute;rer les pages annexes</td><td>G&eacute;rer TrocAFond</td>
 		<td>G&eacute;rer les rangs</td><td>G&eacute;rer le bandeau</td><td>G&eacute;rer la galerie</td>
 		<td>G&eacute;rer le point animation</td></tr>';
-		
+
 		foreach($rangs as $data){
 			if($data-> getNomRang() =='admin'){ //RANG ADMIN AFFICHER MAIS NON MODIFIABLE
 				echo '<tr><td>'.$data-> getNomRang().'</td>';
@@ -90,7 +90,7 @@
 				if ($data-> gereBandeau()){echo '<td>OUI</td>';}else{echo'<td>NON</td>';}
 				if ($data-> gereGalerie()){echo '<td>OUI</td>';}else{echo'<td>NON</td>';}
 				if ($data-> gerePointAnimation()){echo '<td>OUI</td>';}else{echo'<td>NON</td>';}
-					
+
 			}
 			else{ //AFFICHAGE ET POSSIBILITE DE MODIFICATION POUR LES RANGS AUTRES QUE ADMIN
 				echo '<form ACTION="gestiondroit.php" method="POST"><input type="hidden" name="nomRang" value="'.$data-> getNomRang().'"/><tr><td>'.$data-> getNomRang().'</td>';
@@ -124,8 +124,8 @@
 			echo '<form action="gestiondroit.php" method="POST"><input type="hidden" name="ajouterRang"value="true"/><input type="submit" value="Ajouter un nouveau rang"/></form>';
 		}
 		$utilisateurs = $utilisateurManager -> getAllUtilisateur();
-		
-		
+
+
 		echo '<table class="gestionrang" border="1">';
 		echo '<tr><td><b>Pseudo</b></td><td><b>Rang</b></td><td><b>Mail</b></td><td><b>Derniere connexion</b></td></tr>';
 		foreach ($utilisateurs as $data){ //modifier le rang des personnes!
@@ -135,16 +135,16 @@
 				echo '<option value="'.$data->getRang().'" ';if($dataRang->getNomRang()==$data->getRang()){echo 'selected="selected"';}echo'>'.$dataRang->getNomRang().'</option>';
 			}
 			echo'</select></td>';
-	
+
 			echo "<td>".$data->getMail()."</td>";
 			echo "<td>".$data->getDerniereConnexion()."</td>";
 			echo '<td><input type="submit" value="Modifier le rang"/></td></form></tr>';
 		}
-		
+
 		echo '</table><br/>';
 		echo '<a href="gestionenvcontact.php">G&eacute;rer les messages envoy&eacute;s par la section contact</a>';
-		
-		
+
+
 
 		if (isset($_SESSION['gererEvenement'])&&$_SESSION['gererEvenement']){
 			echo '<h1 class="conseiladmini">Gestion Evenement</h1>';

@@ -30,3 +30,5 @@ class EvenementManager extends MainManager
     }
 
 }
+
+?>

@@ -8,7 +8,7 @@
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_contact.png"/></a>';
 			} else if ($page == "partenaire.php" || $page =="editerpartenaire.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_partenaire.png"/></a>';
-			} else if ($page == "connexion.php" || $page =="deconnexion.php" || $page == "monprofil.php"){
+			} else if ($page == "connexion.php" || $page =="deconnexion.php" || $page == "monprofil.php" || $page == "motdepasseoublie.php" || $page == "generateurmdp.php" || $page =="gestionenvcontact.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_connexion.png"/></a>';
 			} else if ($page == "evenement.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_evenement.png"/></a>';
@@ -50,8 +50,8 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav row">
 			<li>
-			  <a href="#" class="col-md-3 button_Asso" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-				  ASSOCIATION
+			  <a class="col-md-3 button_Asso" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					  ASSOCIATION
 			  </a>
 			  <ul class="dropdown-menu">
 				<li><a class="col-md-3 button_Asso" href="quisommesnous.php">QUI SOMMES NOUS</a></li>

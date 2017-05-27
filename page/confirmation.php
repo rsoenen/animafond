@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <?php session_start(); ?>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8"/>  <!-- norme html 5 -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/style_menu.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_index.css">
+
 	<title> Site d'anima'fond, une association de cirque </title>
 </head>
 <body>
 
-<?php 
-	
+<?php
+
+	include("squelettePage/menu.php");
+	echo '<div id="mainDiv" class= "col-md-8 col-md-offset-2">';
 	if (isset($_POST['pseudoConnection'])){  // Test connection
 		
 		include ("../manager/UtilisateurManager.php");
@@ -41,9 +45,6 @@
 	}
 
 
-
-	include("squelettePage/menu.php");
-
 	if(isset($_POST['mailContact'])){	//Confirmation envoie message via Contact	
        
 		include ("../manager/ContactManager.php");
@@ -60,15 +61,14 @@
 		
 		$nom=$_POST['nom'];
 		$mailcontact=$_POST['mailContact'];
-		//include ("../fonction/MailContact.php");
-		echo 'Le message a bien &eacute;t&eacute; envoy&eacute;';
-		echo "<a href='index.php'>Retourner à l'accueil</a></p>";
-	} 
-	
-	
+		include ("../fonction/MailContact.php");
+		echo '<h3>Le message a bien &eacute;t&eacute; envoy&eacute;</h3>';
+	}
+
+	echo "<br/><h3><a href='index.php'>Aller à l'accueil</a></h3></p>";
 	include("squelettePage/footer.php");
 
 ?>
-
+</div>
 </body>
 </html>
