@@ -15,10 +15,7 @@
 	<div class= "col-md-8 col-md-offset-2" id="mainDiv">
 	<h1 class="soustitredescription">L'atelier</h1>
 	
-	<?php   
-	
-	include_once("../manager/MainManager.php");
-	$mainManager = new mainManager();
+	<?php
 		
 	$pathPDF= $mainManager->getPathPDF(); ?>
 

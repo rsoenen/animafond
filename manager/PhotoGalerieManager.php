@@ -83,7 +83,7 @@
 				if($l>0){$imageprecedente=$photos[$l-1]->getNomPhoto();}
 				if($l<count($photos)){$imagesuivante=$photos[$l+1]->getNomPhoto();}
 			}
-			$rep=[$imageprecedente,$imagesuivante];
+			$rep=array($imageprecedente,$imagesuivante);
 			
 			return $rep;
 		}

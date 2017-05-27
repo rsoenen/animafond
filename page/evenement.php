@@ -14,13 +14,13 @@
 		include("squelettePage/menu.php");
 		echo '<div id="mainDiv" class= "col-md-8 col-md-offset-2">';
 
-		require_once("../manager/EvenementManager.php");
 		require_once("../manager/ArticleManager.php");
 
 		$articleManager=new ArticleManager();
-		$bandeauManager = new BandeauManager();
+		$articleManager->setDb($mainManager->getDb());
 
-		$evenement = new Evenement();
+
+	$evenement = new Evenement();
 		$evenement = $evenementManager->getEvenement();
 
 		echo '<br/><h1 class="conseiladmini">'.$evenement->getNomEvenement().'</h1>';

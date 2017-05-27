@@ -22,6 +22,8 @@
 	if(isset($_POST['publier'])&&isset($_POST['contenu'])&&isset($_POST['titre'])){ //ON ENREGISTRE L'ARTICLE
 
 		$articleManager = new ArticleManager();
+		$articleManager->setDb($mainManager->getDb());
+
 		$newArticle = new Article();
 		$newArticle -> setAuteur($_SESSION["pseudo"]);
 		$newArticle -> setContenu($_POST["contenu"]);

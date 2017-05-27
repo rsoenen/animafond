@@ -15,9 +15,10 @@
 	
 	include ("../manager/UtilisateurManager.php");
 	$utilisateurManager = new UtilisateurManager();
-	
-	
-	if(isset($_SESSION['pseudo'])){
+	$utilisateurManager->setDb($mainManager->getDb());
+
+
+if(isset($_SESSION['pseudo'])){
 		if(isset($_POST['editionprofil'])){ //UPDATE L'ADRESSE MAIL
 			$utilisateurManager->updateMail($_SESSION['pseudo'], $_POST['newmail']);
 			

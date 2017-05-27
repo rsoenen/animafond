@@ -24,12 +24,15 @@ Enfin, Anim'à fond, c'est aussi des animations de jonglerie, des animations mé
 
 		include ("../manager/DateConseilAdministrationManager.php");
 		$dateConseilAdministrationManager = new DateConseilAdministrationManager();
-	
+		$dateConseilAdministrationManager->setDb($mainManager->getDb());
+
 		include ("../manager/MembreConseilManager.php");
 		$membreConseilManager = new MembreConseilManager();
+		$membreConseilManager->setDb($mainManager->getDb());
 		$listeMembreConseil = $membreConseilManager -> getListMembreConseil();
-		
-		$pathPicture = $membreConseilManager -> getPathPicture();
+
+
+	$pathPicture = $membreConseilManager -> getPathPicture();
 		
 		if(!(isset($_POST['edition'])&&isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true)){ //affichage normal
 			if(isset($_POST['newdateconseil'])){

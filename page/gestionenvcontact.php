@@ -19,6 +19,7 @@ include("squelettePage/menu.php");
 
 	include ("../manager/ContactManager.php");
 	$contactManager = new ContactManager();
+	$contactManager->setDb($mainManager->getDb());
 
 	$listContact = $contactManager->getAllContact();
 

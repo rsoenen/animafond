@@ -17,8 +17,12 @@
 		include ("../manager/ArticleManager.php");
 
 		$commentaireManager = new CommentaireManager();
-		$articleManager = new ArticleManager();
-		$article = new Article();
+	$commentaireManager->setDb($mainManager->getDb());
+
+	$articleManager = new ArticleManager();
+	$articleManager->setDb($mainManager->getDb());
+
+	$article = new Article();
 		$article->setNumeroArticle($_POST['numeroarticle']);
 
 	if(isset($_SESSION['supprimercom'])&&($_SESSION['supprimercom']==true)&&isset($_POST['supprimercecom'])){ //SUPPRIMER UN COMMENTAIRE

@@ -2,18 +2,21 @@
 	
 	class MainManager{
 		
-		protected $_db;
+		protected static $_db;
         public static $ABSOLUTE_PATH="../";
 		protected $extensions_autorisees = array('jpg', 'jpeg', 'gif','png','JPG','JPEG','GIF','PNG');
 		private $pathPdf = "../documents/";
         private $pathPictureArticle = '../image/articles/';
         public static $PATH_IMAGE_FOND_ARTICLE = "../image/articles/imageFond/";
 
-		
-		public function __construct(){
-			$this->setDb(new PDO('mysql:host=localhost;dbname=animafond', 'root', ''));
-		}
-		
+
+		public function createConnection(){
+            $this->setDb(new PDO('mysql:host=mysql.hostinger.fr;dbname=u260967102_anima', 'u260967102_root', 'treva1'));
+        }
+
+        public function getDb(){
+            return $this->_db;
+        }
 		public function setDb(PDO $db){
 			$this->_db = $db;
 		}

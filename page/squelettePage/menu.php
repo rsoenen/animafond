@@ -21,14 +21,21 @@
 </div>
 <!-- Permet de faire défiler un texte -->
 <?php
+	require_once ("../manager/MainManager.php");
+
 	require_once ("../manager/BandeauManager.php");
 	require_once("../manager/EvenementManager.php");
+	$mainManager=new MainManager();
+	$mainManager->createConnection();
 
 	$bandeauManager = new BandeauManager();
-	
+	$bandeauManager->setDb($mainManager->getDb());
+
 	$bandeau = $bandeauManager-> getTextBandeau();
 
 	$evenementManager = new EvenementManager();
+	$evenementManager->setDb($mainManager->getDb());
+
 	$evenement = new Evenement();
 	$evenement = $evenementManager->getEvenement();
 

@@ -19,10 +19,14 @@
 	
 	include ("../manager/GalerieManager.php");
 	$galerieManager = new GalerieManager();
+	$galerieManager->setDb($mainManager->getDb());
+
 	
 	include ("../manager/PhotoGalerieManager.php");
 	$photoGalerieManager = new PhotoGalerieManager();
-	
+	$photoGalerieManager->setDb($mainManager->getDb());
+
+
 	$pathPicture = $photoGalerieManager -> getPathPicture();
 		
 	if(isset($_SESSION['gererGalerie'])&&$_SESSION['gererGalerie']==true&&isset($_POST['addevenement'])){ //TRAITEMENT DE LA DEMANDE POUR AJOUTER UN EVENEMENT

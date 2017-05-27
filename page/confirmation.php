@@ -19,10 +19,14 @@
 		
 		include ("../manager/UtilisateurManager.php");
 		$utilisateurManager = new UtilisateurManager();
-		
+		$utilisateurManager->setDb($mainManager->getDb());
+
+
 		include ("../manager/RangManager.php");
 		$rangManager = new RangManager();
-		
+		$rangManager->setDb($mainManager->getDb());
+
+
 		$pseudo=$_POST['pseudoConnection'];	
 		$mdphache=sha1($_POST['mdp']);
 		
@@ -49,6 +53,8 @@
        
 		include ("../manager/ContactManager.php");
 		$contactManager = new ContactManager();
+		$contactManager->setDb($mainManager->getDb());
+
 
 		$newContact= new Contact();
 		$newContact->setPseudo($_POST["nom"]);

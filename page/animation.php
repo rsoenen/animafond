@@ -16,8 +16,6 @@
 	if(isset($_SESSION['gererPointAnimation'])&&$_SESSION['gererPointAnimation']==true){
 		
 		include_once ("../manager/MainManager.php");
-		$mainManager = new mainManager();
-		
 		$pathPDF= $mainManager->getPathPDF();
 		
 		echo '<h1 class="soustitredescription">Points animations</h1>';

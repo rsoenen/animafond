@@ -19,6 +19,8 @@
 
 		include ("../manager/PartenaireManager.php");
 		$partenaireManager = new PartenaireManager();
+		$partenaireManager->setDb($mainManager->getDb());
+
 		$pathPicture = $partenaireManager -> getPathPicture();
 		
 		$listPartenaire = $partenaireManager -> listPartenaireByStatut('officiel');

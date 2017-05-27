@@ -19,9 +19,11 @@
 	<?php
 		include ("../manager/GalerieManager.php");
 		$galerieManager = new GalerieManager();
-		
+		$galerieManager->setDb($mainManager->getDb());
+
 		include ("../manager/PhotoGalerieManager.php");
 		$photoGalerieManager = new PhotoGalerieManager();
+		$photoGalerieManager->setDb($mainManager->getDb());
 		
 		$pathPicture = $photoGalerieManager -> getPathPicture();
 		

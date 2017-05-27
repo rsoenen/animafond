@@ -12,13 +12,6 @@
 </head>
 <body>
 <?php 
-	include ("../manager/ArticleManager.php");
-	include ("../manager/BandeauManager.php");
-	include ("../manager/CommentaireManager.php");
-	
-	
-	$articleManager = new ArticleManager();
-	$bandeauManager = new BandeauManager();
 
 	if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['nouveaubandeau'])){ //UPDATE LE NOUVEAU BANDEAU DANS LA BDD
 		
@@ -30,6 +23,10 @@
 	}
 	
 	include("squelettePage/menu.php"); //MENU PLACER ICI POUR LES CHANGEMENTS DE PERSONNES
+    include ("../manager/ArticleManager.php");
+
+      $articleManager = new ArticleManager();
+      $articleManager->setDb($mainManager->getDb());
       echo '<div id="mainDiv" class= "col-md-8 col-md-offset-2">';
      $listArticle = $articleManager->getListArticle(3, false);
 

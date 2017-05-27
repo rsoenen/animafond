@@ -12,14 +12,7 @@
 <body>
 <?php
 
-    include ("../manager/ArticleManager.php");
-    include ("../manager/BandeauManager.php");
-
-
-    $articleManager = new ArticleManager();
-    $bandeauManager = new BandeauManager();
-
-    if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['nouveaubandeau'])){ //UPDATE LE NOUVEAU BANDEAU DANS LA BDD
+     if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['nouveaubandeau'])){ //UPDATE LE NOUVEAU BANDEAU DANS LA BDD
 
         $bandeau = new Bandeau();
         $bandeau -> setTextBandeau($_POST["nouveaubandeau"]);
@@ -29,6 +22,16 @@
     }
 
     include("squelettePage/menu.php"); //MENU PLACER ICI POUR LES CHANGEMENTS DE PERSONNES
+
+    include ("../manager/ArticleManager.php");
+    include ("../manager/CommentaireManager.php");
+
+
+    $articleManager = new ArticleManager();
+    $articleManager->setDb($mainManager->getDb());
+
+    $commentaireManager= new CommentaireManager();
+    $commentaireManager->setDb($mainManager->getDb());
     echo '<div id ="mainDiv" class="col-md-8 col-md-offset-2">';
     if(isset($_POST['gererArticle'])&&isset($_SESSION['gererArticle'])&&$_SESSION['supprimerart']==true){ //CONFIRMATION DE SUPPRESSION D'ARTICLE
         echo '<table><form action="index.php" method="POST"><input type="hidden" name="supprimerarticle" value="'.$_POST['confsupprimerarticle'].'"/><tr><td cospan="2">Etes vous sur de supprimer cet article<br/></td></tr><tr><td><input type="submit" value="OUI"></td></form>';

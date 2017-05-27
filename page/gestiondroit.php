@@ -17,12 +17,14 @@
 	<?php 
 	include ("../manager/RangManager.php");
 	include ("../manager/UtilisateurManager.php");
-	include_once ("../manager/EvenementManager.php");
 
 	$rangManager = new RangManager();
+	$rangManager->setDb($mainManager->getDb());
+
 	$utilisateurManager = new UtilisateurManager();
-	$evenementManager= new EvenementManager();
-	
+	$utilisateurManager->setDb($mainManager->getDb());
+
+
 	if(isset($_SESSION['gererRang'])&&$_SESSION['gererRang']==true){
 		if(isset($_POST['nomRang'])){ //EDITION DE LA BDD POUR LES DROITS DES DIFFERENTS RANGS
 

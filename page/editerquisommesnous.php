@@ -14,8 +14,10 @@
 		<?php
 			include ("../manager/MembreConseilManager.php");
 			$membreConseilManager = new MembreConseilManager();
-			
-			if(isset($_POST['ajouter'])&&isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){ ?>
+			$membreConseilManager->setDb($mainManager->getDb());
+
+
+		if(isset($_POST['ajouter'])&&isset($_SESSION['gererPageDiverse'])&&$_SESSION['gererPageDiverse']==true){ ?>
 				<div class="nouvpresentation col-md-6 col-md-offset-3"><form action="editerquisommesnous.php" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="nouveau" value="true">
 						<div class="form-group">

@@ -24,8 +24,10 @@
 		
 		include ("../manager/PartenaireManager.php");
 		$partenaireManager = new PartenaireManager();
-			
-		if(isset($_POST['site'])&&isset($_POST['nouvpartenaire'])&&$_SESSION['gererPageDiverse']&&$_SESSION['gererPageDiverse']==true){ //AJOUT D'UN PARTENAIRE
+		$partenaireManager->setDb($mainManager->getDb());
+
+
+	if(isset($_POST['site'])&&isset($_POST['nouvpartenaire'])&&$_SESSION['gererPageDiverse']&&$_SESSION['gererPageDiverse']==true){ //AJOUT D'UN PARTENAIRE
 			
 			$partenaire = new Partenaire();
 			$partenaire -> updatePartenaire($_POST['nouvpartenaire'], $_POST['site'], $_POST['statut']);
