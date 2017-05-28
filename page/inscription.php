@@ -4,6 +4,7 @@
 	<meta charset="utf-8"/>  <!-- norme html 5 -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="../css/style_menu.css">
+	<link rel="stylesheet" type="text/css" href="../css/style_connexion.css">
 	<title> Site d'anima'fond, une association de cirque </title>
 </head>
 <body>
@@ -11,22 +12,17 @@
 	include("squelettePage/menu.php");
 	?>
 
-<div class= "col-md-8 col-md-offset-2">
+<div id="mainDiv" class="col-md-8 col-md-offset-2">
 <?php //vérification des différents champs
-	if(isset($_POST['flag'])){  
+	if(isset($_POST['flag'])){
+		include ("../manager/UtilisateurManager.php");
+		$utilisateurManager = new UtilisateurManager();
+		$utilisateurManager->setDb($mainManager->getDb());
+
 		if(isset($_POST['pseudo'])){ //Verification que le pseudo souhaité n'est pas déjà pris
-			$requete1 = $bdd->query("SELECT pseudo FROM utilisateur ORDER BY pseudo ASC");//Nombre d'article total
-			$c=0;
-			while($data1 = $requete1->fetch()){
-				$pseudo[$c]=$data1['pseudo'];
-				$c++;
-			}$c1=0;
-			while($c1!=$c && $pseudo[$c1]!=$_POST['pseudo']){
-				$c1++;
-			}
-			$requete1->closeCursor();
-			if($c1==$c){
-				$cond5=true;
+			$cond5 = $utilisateurManager ->pseudoAlreadyUse($_POST['pseudo']);
+			if ($cond5 == true){
+				$cond5 = false;
 			} else{
 				echo "<u><b>Le pseudo que vous voulez prendre est d&eacute;jà utiliser</b></u><br/>";
 			}
@@ -37,18 +33,15 @@
 		if(strlen($_POST['mdp'])<6){echo '<u><b>Veuillez entrer un mot de passe d\'au moins 6 caractère.</b></u><br/>';$cond3=false;}
 		if(strlen($_POST['mail'])<1){echo '<u><b>Veuillez entrer une adresse mail.</b></u><br/>';$cond4=false;}
 		if($cond1==true&&$cond2==true&&$cond3==true&&$cond4==true&&$cond5==true){
-			$pseudo=$_POST['pseudo'];
-			$mdphache=sha1($_POST['mdp']);
+			$utilisateur = new Utilisateur();
+			$utilisateur ->setPseudo($_POST['pseudo']);
+			$utilisateur -> setMail($_POST["mail"]);
+			$utilisateur -> setMdp(sha1($_POST['mdp']));
 			if($_POST['sexe']=='homme'){$homme=true;}
 			if($_POST['sexe']=='femme'){$homme=false;}
-			
-			$requete2 = $bdd->prepare('INSERT INTO utilisateur VALUES (:pseudo,:mdphache,:sexe,"membre",:mail,"",NOW())'); //Suppresion article
-			$requete2->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
-			$requete2->bindParam(':mdphache', $mdphache, PDO::PARAM_STR);
-			$requete2->bindParam(':sexe', $homme, PDO::PARAM_BOOL);
-			$requete2->bindParam(':mail', $_POST["mail"], PDO::PARAM_BOOL);
-			$requete2->execute();
-			$bdd = null;
+			$utilisateur -> setHomme($homme);
+
+			$utilisateurManager -> add($utilisateur);
 			
 			 $mail='animafond@live.fr';
 				if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)){ //s'adapte aux différentes normes{
@@ -76,10 +69,8 @@
 				$message.= $passage_ligne."--".$boundary.$passage_ligne;
 				
 				mail($mail,$sujet,$message,$header);
-			
-			
-			
-			header('Location:confirmation_inscription.php');
+
+			header('Location:confirmation.php');
 		}
 		
 	}

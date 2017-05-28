@@ -91,6 +91,19 @@
             $q->bindParam(':mdp',$newmdp, PDO::PARAM_STR);
             $q->execute();
         }
+
+        public function pseudoAlreadyUse($pseudo){
+            $q = $this->_db-query("SELECT pseudo FROM utilisateur WHERE pseudo=:pseudo");
+            $q->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
+            $q->execute();
+            $donnees = $q->fetch(PDO::FETCH_ASSOC);
+
+            if ($donnees == null){
+                return false;
+            } else {
+                return true;
+            }
+        }
 	}
 
 

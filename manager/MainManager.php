@@ -2,7 +2,7 @@
 	
 	class MainManager{
 		
-		protected static $_db;
+		protected $_db;
         public static $ABSOLUTE_PATH="../";
 		protected $extensions_autorisees = array('jpg', 'jpeg', 'gif','png','JPG','JPEG','GIF','PNG');
 		private $pathPdf = "../documents/";
@@ -11,7 +11,7 @@
 
 
 		public function createConnection(){
-            $this->setDb(new PDO('mysql:host=mysql.hostinger.fr;dbname=u260967102_anima', 'u260967102_root', 'treva1'));
+                $this->setDb(new PDO('mysql:host=localhost;dbname=animafond', 'root', ''));
         }
 
         public function getDb(){
@@ -41,7 +41,7 @@
 				if ($_FILES['monfichier']['size'] <= 1000000){
 					$infosfichier = pathinfo($_FILES['monfichier']['name']);
 					$extension_upload = $infosfichier['extension'];
-					$extensions_pdf = array('pdf');
+					$extensions_pdf = array('pdf', 'PDF');
 					if (in_array($extension_upload,$extensions_pdf)){
                         $nomImage=$nomPDF.'.'.$extension_upload;
 						move_uploaded_file($_FILES['monfichier']['tmp_name'], $this->getPathPDF().$nomImage);
@@ -52,8 +52,8 @@
 		}
 		
 		public function convertisseurCaractereAccent($stringAModifier){
-			$search  = array('é', 'è', 'ê', 'ë', 'ù', 'à', 'ç', ' ', '&');
-			$replace = array('&eacute;', '&egrave;', '&ecirc;', '&euml;', '&ugrave;', '&agrave;', '&ccedil;', '&nbsp;', '&amp;');
+			$search  = array('é', 'è', 'ê', 'ë', 'ù', 'à', 'ç', '&');
+			$replace = array('&eacute;', '&egrave;', '&ecirc;', '&euml;', '&ugrave;', '&agrave;', '&ccedil;', '&amp;');
 			$rep = str_replace($search, $replace, $stringAModifier);
 			
 			return $rep;

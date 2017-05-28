@@ -8,7 +8,7 @@
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_contact.png"/></a>';
 			} else if ($page == "partenaire.php" || $page =="editerpartenaire.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_partenaire.png"/></a>';
-			} else if ($page == "connexion.php" || $page =="deconnexion.php" || $page == "monprofil.php" || $page == "motdepasseoublie.php" || $page == "generateurmdp.php" || $page =="gestionenvcontact.php"){
+			} else if ($page == "connexion.php" ||$page == "inscription.php" || $page =="deconnexion.php" || $page == "monprofil.php" || $page == "motdepasseoublie.php" || $page == "generateurmdp.php" || $page =="gestionenvcontact.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_connexion.png"/></a>';
 			} else if ($page == "evenement.php"){
 				echo '<a href="index.php"><img class="col-md-offset-2 col-md-8" id="banniere" src="../image/design/banniere/banniere_evenement.png"/></a>';

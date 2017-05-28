@@ -9,13 +9,14 @@
 			
 			$q = $this->_db->prepare('INSERT INTO `article`(`titre`, `contenu`, `dateposte`, `auteur`, `ipPosteur`, `evenement`,`image`, `preambule`) VALUES (:titre, :contenu, NOW(), :auteur, :ipPosteur, :evenement, :image, :preambule)');
 
-			$q->bindValue(':titre', this.convertisseurCaractereAccent($article->getTitre()), PDO::PARAM_STR);
-			$q->bindValue(':contenu', this.convertisseurCaractereAccent($article->getContenu()), PDO::PARAM_STR);
+
+            $q->bindValue(':titre', $this->convertisseurCaractereAccent($article->getTitre()), PDO::PARAM_STR);
+			$q->bindValue(':contenu', $this->convertisseurCaractereAccent($article->getContenu()), PDO::PARAM_STR);
 			$q->bindValue(':auteur', $article->getAuteur(), PDO::PARAM_STR);
 			$q->bindValue(':ipPosteur', $article->getIpPosteur(), PDO::PARAM_STR);
 			$q->bindValue(':evenement', $article->isEvenement(), PDO::PARAM_BOOL);
             $q->bindValue(':image', $article->getImage(),PDO::PARAM_STR);
-            $q->bindValue(':preambule', this.convertisseurCaractereAccent($article->getPreambule()),PDO::PARAM_STR);
+            $q->bindValue(':preambule', $this->convertisseurCaractereAccent($article->getPreambule()),PDO::PARAM_STR);
 
 			$q->execute();
 
@@ -25,12 +26,14 @@
 		private function addImageToArticle(Article $article){
 
             $q = $this->_db->prepare("SELECT * FROM article WHERE (titre=:titre AND contenu=:contenu)");
-            $q->bindValue(':titre', $article->getTitre(), PDO::PARAM_STR);
-            $q->bindValue(':contenu',$article->getContenu(), PDO::PARAM_STR);
+            $q->bindValue(':titre', $this->convertisseurCaractereAccent($article->getTitre()), PDO::PARAM_STR);
+            $q->bindValue(':contenu',$this->convertisseurCaractereAccent($article->getContenu()), PDO::PARAM_STR);
             $q->execute();
 
             $donnees = $q->fetch(PDO::FETCH_ASSOC);
             $myArticle = new Article();
+
+            echo $donnees;
             $myArticle->hydrate($donnees);
 
 
@@ -84,13 +87,15 @@
 		}
 		
 		public function updateArticle (Article $article){
-			
+
+            echo $article->getNumeroArticle();
+
 			$q = $this->_db->prepare('UPDATE `article` SET `titre`=:titre,`contenu`=:contenu,`preambule`=:preambule  WHERE numeroarticle=:numeroarticle ');
-			$q->bindValue(':titre', this.convertisseurCaractereAccent($article->getTitre()),PDO::PARAM_STR);
-			$q->bindValue(':contenu', this.convertisseurCaractereAccent($article->getContenu()), PDO::PARAM_STR);
-            $q->bindValue(':preambule', this.convertisseurCaractereAccent($article->getPreambule()), PDO::PARAM_STR);
+			$q->bindValue(':titre', $this->convertisseurCaractereAccent($article->getTitre()),PDO::PARAM_STR);
+			$q->bindValue(':contenu', $this->convertisseurCaractereAccent($article->getContenu()), PDO::PARAM_STR);
+            $q->bindValue(':preambule',$this->convertisseurCaractereAccent($article->getPreambule()), PDO::PARAM_STR);
             $q->bindValue(':numeroarticle', $article->getNumeroArticle(),PDO::PARAM_INT);
-			
+
 			$q->execute();
 		}
 

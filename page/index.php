@@ -53,7 +53,7 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="../image/articles/imageFond/<?php echo $listArticle[0]->getImage();?>" alt="First slide">
+          <img class="first-slide" src="<?php echo ArticleManager::$PATH_IMAGE_FOND_ARTICLE.$listArticle[0]->getImage();?>" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1><?php echo $listArticle[0]->getTitre();?></h1>
@@ -68,7 +68,7 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="../image/articles/imageFond/<?php echo $listArticle[1]->getImage();?>" alt="Second slide">
+          <img class="second-slide" src=<?php echo ArticleManager::$PATH_IMAGE_FOND_ARTICLE.$listArticle[1]->getImage();?>" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1><?php echo $listArticle[1]->getTitre();?></h1>
@@ -83,7 +83,7 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="../image/articles/imageFond/<?php echo $listArticle[2]->getImage();?>" alt="Third slide">
+          <img class="third-slide" src="<?php echo ArticleManager::$PATH_IMAGE_FOND_ARTICLE.$listArticle[2]->getImage();?>" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1><?php echo $listArticle[2]->getTitre();?></h1>

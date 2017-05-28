@@ -138,7 +138,7 @@
 				if ($colonne == 0){echo '<tr>';}
 				echo '<form action="voirgalerie.php" method="POST"><input type="hidden" name="nomphoto" value="'.$data->getNomPhoto().'"/>';
 				echo '<input type="hidden" name="nomevenement" value="'.$_POST['choixevenement'].'"/>';
-				echo '<td class="tdphotogalerie"><input type="image" alt="test" src="'.$pathPicture.$nomdossier.'/'.$data->getNomPhoto().'"/ class="photo_galerie" ></td>';
+				echo '<td class="tdphotogalerie"><input type="image" alt="test" src="'.$pathPicture.$nomdossier.'/'.$data->getNomPhoto().'" ></td>';
 				echo '</form>';
 				if ($colonne == 3){echo '</tr>';$colonne =0;} else {$colonne ++;}
 			} 
