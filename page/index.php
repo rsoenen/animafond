@@ -14,7 +14,14 @@
 <?php 
 
 	if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_POST['nouveaubandeau'])){ //UPDATE LE NOUVEAU BANDEAU DANS LA BDD
-		
+        require_once ("../manager/BandeauManager.php");
+        require_once ("../manager/MainManager.php");
+
+        $mainManager=new MainManager();
+        $mainManager->createConnection();
+        $bandeauManager = new BandeauManager();
+        $bandeauManager->setDb($mainManager->getDb());
+
 		$bandeau = new Bandeau();
 		$bandeau -> setTextBandeau($_POST["nouveaubandeau"]);
 		$bandeau -> setLastUpdateur($_SESSION['pseudo']);
@@ -37,7 +44,7 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
   $bandeau = $bandeauManager -> getTextBandeau($_SESSION['rang']);
   echo '<form action="index.php" class="form-inline" method="POST"><div class="form-group">
     <label for="textBandeau">Entrez le texte pour le bandeau</label>
-    <input type="text" class="form-control" id="textBandeau" value="'.$bandeau->getTextBandeau().'"/>
+    <input type="text" class="form-control" name="nouveaubandeau" id="textBandeau" value="'.$bandeau->getTextBandeau().'"/>
   <input type="submit" class="btn btn-default" value="Enregistrez le nouveau texte"/></form>';
 }
 

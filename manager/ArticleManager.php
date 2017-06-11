@@ -43,9 +43,9 @@
             $this->updateImageToArticle($myArticle);
         }
 		
-		public function deleteArticle(Article $article){
+		public function deleteArticle($numeroArticle){
 			$q = $this->_db->prepare("DELETE FROM `article` WHERE `numeroarticle`= :numeroArticle"); 
-			$q->bindValue(':numeroArticle', $article->getNumeroArticle(), PDO::PARAM_INT);
+			$q->bindValue(':numeroArticle', $numeroArticle, PDO::PARAM_INT);
 			$q->execute();
 		}
 		
