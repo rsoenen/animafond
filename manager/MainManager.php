@@ -52,11 +52,11 @@
 		}
 		
 		public function convertisseurCaractereAccent($stringAModifier){
-			$search  = array('é', 'è', 'ê', 'ë', 'ù', 'à', 'ç', '&');
-			$replace = array('&eacute;', '&egrave;', '&ecirc;', '&euml;', '&ugrave;', '&agrave;', '&ccedil;', '&amp;');
-			$rep = str_replace($search, $replace, $stringAModifier);
+//			$search  = array('é', 'è', 'ê', 'ë', 'ù', 'à', 'ç', '&');
+//			$replace = array('&eacute;', '&egrave;', '&ecirc;', '&euml;', '&ugrave;', '&agrave;', '&ccedil;', '&amp;');
+//			$rep = str_replace($search, $replace, $stringAModifier);
 			
-			return $rep;
+			return $stringAModifier;
         }
 
         /**
