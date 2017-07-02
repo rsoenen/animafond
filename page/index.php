@@ -75,7 +75,7 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src=<?php echo ArticleManager::$PATH_IMAGE_FOND_ARTICLE.$listArticle[1]->getImage();?>" alt="Second slide">
+          <img class="second-slide" src="<?php echo ArticleManager::$PATH_IMAGE_FOND_ARTICLE.$listArticle[1]->getImage();?>" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1><?php echo $listArticle[1]->getTitre();?></h1>
@@ -122,8 +122,8 @@ if(isset($_SESSION['gererBandeau'])&&$_SESSION['gererBandeau']==true&&isset($_PO
         <a href="https://www.facebook.com/anima.fond">Compte d'animafond</a>
       </div>
     </div>
-
-    <a href="articles.php"><button>Tous nos articles</button></a>
+    <br/>
+    <a href="articles.php"><button class="btn btn-default">Tous nos articles</button></a>
 </div>
 <?php include("squelettePage/footer.php");?>
 </body>

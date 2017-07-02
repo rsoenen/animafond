@@ -30,10 +30,7 @@
 
 		echo "POUR METTRE L'IMAGE, METTEZ DE CE CODE A L'ENDROIT OU VOUS VOULEZ VOTRE IMAGE : &lt;img src='".$mainManager->getPathPictureArticle().$nomImage."'/&gt;";
 
-	}
-	
-	
-	if(isset($_POST['editer'])&&isset($_POST['contenu'])&&isset($_POST['titre'])){ //ON ENREGISTRE L'ARTICLE
+	} else if (isset($_POST['editer'])&&isset($_POST['contenu'])&&isset($_POST['titre'])){ //ON ENREGISTRE L'ARTICLE
 
 		$updateArticle = new Article();
 		$updateArticle -> setNumeroArticle($_POST['numeroarticle']);
@@ -67,19 +64,13 @@
 				<label for="nomimage" class="textCouleurBlanche">Nom de l'image :</label>
 				<input type="text" name="nomimage"/><br/> <!--HEBERGEMENT D'IMAGE-->
 				<input type="file" name="monfichier"/><br/>
-				<input type="submit" name="postezimage" value="Poster l'image"/>
-			</div>
-
-			<div>
-				<h4>Image représentant l'article</h4>
-				<label for="monfichierfond" class="textCouleurBlanche">Image :</label>
-				<input type="file" name="monfichierfond"><br/>
+				<input type="submit" name="postezimage" class="btn btn-default" value="Poster l'image"/>
 			</div>
 
 			<input type="hidden" name="numeroarticle" value="<?php echo $_POST['numeroarticle']; ?>"/>
 			<input type="hidden" name="editer" value="true"/>
 
-			<input class="bouttonAjoutModificationArticle" type="submit" id="envoyerArticle" value="Publier l'article"/>
+			<input class="bouttonAjoutModificationArticle" type="submit" class="btn btn-default" id="envoyerArticle" value="Publier l'article"/>
 		</form>
 
 

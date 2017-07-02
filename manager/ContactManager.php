@@ -9,7 +9,7 @@
 			$q = $this->_db->prepare('INSERT INTO `contact`(`pseudo`, `datemessage`, `contenu`, `mail`, `objet`, `ipPosteur`) VALUES (:pseudo,NOW(),:contenu,:mail,:objet,:ipPosteur)');
 
 			$q->bindValue(':pseudo', $contact->getPseudo(), PDO::PARAM_STR);
-			$q->bindValue(':contenu',this.convertisseurCaractereAccent($contact->getContenu()), PDO::PARAM_STR);
+			$q->bindValue(':contenu', $this->convertisseurCaractereAccent($contact->getContenu()), PDO::PARAM_STR);
 			$q->bindValue(':mail', $contact->getMail(), PDO::PARAM_STR);
 			$q->bindValue(':objet', $contact->getObjet(), PDO::PARAM_STR);
 			$q->bindValue(':ipPosteur', $contact->getIpPosteur());

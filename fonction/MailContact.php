@@ -1,6 +1,6 @@
 <?php
-	$mail='animafond@live.fr';  // Déclaration de l'adresse de destination.
-	if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui présentent des bogues.
+	$mail='animafond@live.fr';  // Dï¿½claration de l'adresse de destination.
+	if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui prï¿½sentent des bogues.
 	{
 		$passage_ligne = "\r\n";
 	}
@@ -8,27 +8,27 @@
 	{
 		$passage_ligne = "\n";
 	}
-	//=====Déclaration des messages au format texte et au format HTML.
+	//=====Dï¿½claration des messages au format texte et au format HTML.
 	$message_txt ="De ".$nom.", ".$mailcontact.$passage_ligne.$passage_ligne.$_POST['contenu'];
 	$message_html = "<html><head></head><body><b>Message de ".$nom."(".$mailcontact.")</b><br/><br/>".$_POST['contenu'].".</body></html>";
 	//==========
 	 
-	//=====Création de la boundary.
+	//=====Crï¿½ation de la boundary.
 	$boundary = "-----=".md5(rand());
 	//==========
 	 
-	//=====Définition du sujet.
+	//=====Dï¿½finition du sujet.
 	if(isset($_POST['objet'])){$sujet=$_POST['objet'];}else{$sujet="Message d'un utilisateur du site";}
 	//=========
 	 
-	//=====Création du header de l'e-mail.
+	//=====Crï¿½ation du header de l'e-mail.
 	$header = "From: \"".$nom."\"<".$mailcontact.">".$passage_ligne;
 	$header.= "Reply-to: \"Animafond\" <animafond@live.fr>".$passage_ligne;
 	$header.= "MIME-Version: 1.0".$passage_ligne;
 	$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 	//==========
 	 
-	//=====Création du message.
+	//=====Crï¿½ation du message.
 		$message = $passage_ligne."--".$boundary.$passage_ligne;
 		//=====Ajout du message au format texte.
 		$message.= "Content-Type: text/plain; charset=\"UTF-8\"".$passage_ligne;
@@ -53,8 +53,8 @@
 	
 	// MESSAGE DE CONFIMATION A LA PERSONNE
 	
-	$mail=$mailcontact;  // Déclaration de l'adresse de destination.
-	if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui présentent des bogues.
+	$mail=$mailcontact;  // Dï¿½claration de l'adresse de destination.
+	if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) // On filtre les serveurs qui prï¿½sentent des bogues.
 	{
 		$passage_ligne = "\r\n";
 	}
@@ -62,27 +62,27 @@
 	{
 		$passage_ligne = "\n";
 	}
-	//=====Déclaration des messages au format texte et au format HTML.
-	$message_txt =$message_txt ="Bonjour,".$passage_ligne.$passage_ligne."Votre mail a bien été transmis à  ANIM'A FOND. Nous traiterons votre demande dès que possible.".$passage_ligne." En cas de demande urgente, vous pouvez contacter Cyril RAVET au 06.63.60.86.58.".$passage_ligne.$passage_ligne."Cordialement".$passage_ligne.$passage_ligne." L'équipe d'ANIM'A FOND";
-	$message_html = "<html><head></head><body><b>Bonjour,</b><br/><br/>Votre mail a bien été transmis à  ANIM'A FOND. Nous traiterons votre demande dès que possible.<br/>En cas de demande urgente, vous pouvez contacter Cyril RAVET au 06.63.60.86.58.<br/><br/>L'équipe d'ANIM'A FOND</body></html>";
+	//=====Dï¿½claration des messages au format texte et au format HTML.
+	$message_txt =$message_txt ="Bonjour,".$passage_ligne.$passage_ligne."Votre mail a bien Ã©tÃ© transmis Ã  ANIM'A FOND. Nous traiterons votre demande dÃ¨s que possible.".$passage_ligne." En cas de demande urgente, vous pouvez contacter Cyril RAVET au 06.63.60.86.58.".$passage_ligne.$passage_ligne."Cordialement".$passage_ligne.$passage_ligne." L'ï¿½quipe d'ANIM'A FOND";
+	$message_html = "<html><head></head><body><b>Bonjour,</b><br/><br/>Votre mail a bien Ã©tÃ© transmis Ã  ANIM'A FOND. Nous traiterons votre demande dÃ¨s que possible.<br/>En cas de demande urgente, vous pouvez contacter Cyril RAVET au 06.63.60.86.58.<br/><br/>L'ï¿½quipe d'ANIM'A FOND</body></html>";
 	//==========
 	 
-	//=====Création de la boundary.
+	//=====Crï¿½ation de la boundary.
 	$boundary = "-----=".md5(rand());
 	//==========
 	 
-	//=====Définition du sujet.
+	//=====Dï¿½finition du sujet.
 	$sujet = "Confirmation d'envoi de votre message";
 	//=========
 	 
-	//=====Création du header de l'e-mail.
+	//=====Crï¿½ation du header de l'e-mail.
 	$header = "From: \"Animafond\" <animafond@live.fr>".$passage_ligne;
 	$header.= "Reply-to: \"".$nom."\"<".$mailcontact.">".$passage_ligne;
 	$header.= "MIME-Version: 1.0".$passage_ligne;
 	$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 	//==========
 	 
-	//=====Création du message.
+	//=====Crï¿½ation du message.
 		$message = $passage_ligne."--".$boundary.$passage_ligne;
 		//=====Ajout du message au format texte.
 		$message.= "Content-Type: text/plain; charset=\"UTF-8\"".$passage_ligne;

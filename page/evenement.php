@@ -48,10 +48,7 @@
 			if(isset($_SESSION['gererArticle'])&&$_SESSION['gererArticle']==true){ //editer un article
 				echo '<td width="100px"><form method="POST" action="editionarticle.php">';
 				echo '<input type="hidden" name="numeroarticle" value='.$article->getNumeroArticle().'>';
-				echo '<input type="submit" value="Editer cet article"></form></td>';
-				echo '<td width="50px"><form method="POST" action="evenement.php">';
-				echo '<input type="hidden" name="confsupprimerarticle" value='.$article->getNumeroArticle().'>';
-				echo '<input type="submit" class="imagesupprimer" value=""></form></td>';
+				echo '<input type="submit" class="btn btn-default" value="Editer cet article"></form></td>';
 			}
 			
 			echo '</tr></table>';

@@ -57,7 +57,7 @@
 
 
 		$newContact= new Contact();
-		$newContact->setPseudo($_POST["nom"]);
+		$newContact->setPseudo($_POST["name"]);
 		$newContact->setContenu($_POST["contenu"]);
 		$newContact->setMail($_POST["mailContact"]);
 		$newContact->setIpPosteur($_SERVER["REMOTE_ADDR"]);

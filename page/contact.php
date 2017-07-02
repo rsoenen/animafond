@@ -22,12 +22,14 @@
 							<input type="text" class="form-control" name="name" required="required"/>
 						</div>
 					</div>';
+		} else {
+			echo '<input type="hidden" name="name" value="'.$_SESSION["pseudo"].'">';
 		}
 	?>
 	<div class="form-group">
-		<label for="mail" class="col-sm-2 control-label">Mail :</label>
+		<label for="mailContact" class="col-sm-2 control-label">Mail :</label>
 		<div class="col-sm-10">
-			<input type="email" name="mail" required="required" class="form-control" />
+			<input type="email" name="mailContact" required="required" class="form-control" />
 		</div>
 	</div>
 	<div class="form-group">

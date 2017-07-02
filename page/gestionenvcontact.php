@@ -23,8 +23,6 @@ include("squelettePage/menu.php");
 
 	$listContact = $contactManager->getAllContact();
 
-	echo '<div class="article">';
-
 	foreach($listContact as $contact){
 		echo '<table><tr><td><u>Poster par '.$contact->getPseudo().' le '.$contact->getDateMessage().' avec pour adresse mail :'.$contact->getMail().'</u></td></tr>';
 		echo '<tr><td>'.$contact->getContenu().'</td></tr></table><br/>';
