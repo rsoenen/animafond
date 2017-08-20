@@ -87,11 +87,11 @@
 			
 			$nomPhoto = $photoGalerieManager-> getFirstPictureEvenement($data->getEvenement());
 			
-			if ($colonne == 0){echo '<tr>';}
+			if ($colonne == 0){echo '<tr class="col-md-12">';}
 			echo '<td><form action="galerie.php" method="POST">';
-			echo '<table><tr><td><input type="hidden" name="choixevenement" value="'.$data->getEvenement().'"><input type="image" src="'.$pathPicture.$data->getNomDossier().'/'.$nomPhoto.'" class="photo_galerie"/></td></tr><tr><td align="center">'.$data->getEvenement().'</td><tr></table>';
+			echo '<table><tr><td class="col-md-4"><input type="hidden" name="choixevenement" value="'.$data->getEvenement().'"><input type="image" src="'.$pathPicture.$data->getNomDossier().'/'.$nomPhoto.'" class="photo_galerie"/></td></tr><tr><td align="center">'.$data->getEvenement().'</td><tr></table>';
 			echo '</form></td>';
-			if ($colonne == 3){echo '</tr>';$colonne =0;} else {$colonne ++;}
+			if ($colonne == 2){echo '</tr>';$colonne =0;} else {$colonne ++;}
 		}
 		if ($colonne != 0){echo '</tr>';}
 		echo '</table>';
@@ -113,34 +113,33 @@
 		$nomdossier= $galerieManager-> getNomDossierEvenement($evenementchoisi);
 		
 		$listPhoto= $photoGalerieManager -> getAllPhotoEvenement($evenementchoisi);
-		
-		
+
 		if(isset($_POST['passermodeedition'])&&$_POST['passermodeedition']=='true'&&isset($_SESSION['gererGalerie'])&&$_SESSION['gererGalerie']==true){
-			echo '<table>';
+			echo '<table  class="row">';
 			$colonne = 0;
 			foreach($listPhoto as $data){
-				if ($colonne == 0){echo '<tr>';}
+				if ($colonne == 0){echo '<tr  class="col-md-12">';}
 				echo '<form action="voirgalerie.php" method="POST"><input type="hidden" name="nomphoto" value="'.$data->getNomPhoto().'"/>';
 				echo '<input type="hidden" name="nomevenement" value="'.$_POST['choixevenement'].'"/>';
 				echo '<td class="tdphotogalerie"><input type="image" src="'.$pathPicture.$nomdossier.'/'.$data->getNomPhoto().'"/ class="photo_galerie"></form>';
 				echo '<form method="POST" action="galerie.php"><input type="hidden" name="supprimerphoto" value="'.$data->getNomPhoto().'"><input type="hidden" name="choixevenement" value="'.$_POST['choixevenement'].'"><input type="submit" value="Supprimer cette photo"/></form></td>';
-				if ($colonne == 3){echo '</tr>';$colonne =0;} else {$colonne ++;}
+				if ($colonne == 2){echo '</tr>';$colonne =0;} else {$colonne ++;}
 			}
 			if ($colonne != 0){echo '</tr>';}
 			echo '</table>';
 		
 		}
 		else { //SI ON EST PAS EN MODE EDITION
-			echo '<table>';
+			echo '<table  class="row">';
 			$colonne = 0;
-			
+
 			foreach($listPhoto as $data){
-				if ($colonne == 0){echo '<tr>';}
+				if ($colonne == 0){echo '<tr class="col-md-12">';}
 				echo '<form action="voirgalerie.php" method="POST"><input type="hidden" name="nomphoto" value="'.$data->getNomPhoto().'"/>';
 				echo '<input type="hidden" name="nomevenement" value="'.$_POST['choixevenement'].'"/>';
 				echo '<td class="tdphotogalerie"><input type="image" alt="test" src="'.$pathPicture.$nomdossier.'/'.$data->getNomPhoto().'" ></td>';
 				echo '</form>';
-				if ($colonne == 3){echo '</tr>';$colonne =0;} else {$colonne ++;}
+				if ($colonne == 2){echo '</tr>';$colonne =0;} else {$colonne ++;}
 			} 
 			if ($colonne != 0){echo '</tr>';}
 			echo '</table>';
