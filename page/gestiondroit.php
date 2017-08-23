@@ -162,7 +162,7 @@
 			$evenement = $evenementManager->getEvenement();
 
 			echo '<form action="gestiondroit.php" method="POST">';
-			echo '<table><tr><td>Nom de l\'&eacute;v&eacute;nement: </td><td><input type="text" value="'.$evenement->getNomEvenement().'"" name="nomevenement"/></td></tr>';
+			echo '<table><tr><td>Nom de l\'&eacute;v&eacute;nement: </td><td><input maxlength="8" type="text" value="'.$evenement->getNomEvenement().'"" name="nomevenement"/> (8 caractères maximums)</td></tr>';
 			echo '<tr><td>Visible sur le site: </td><td><INPUT type= "radio" ';if($evenement->isVisible()){echo ' checked';} echo ' name="visible" value=1/>OUI<INPUT type= "radio" name="visible" ';if(!$evenement->isVisible()){echo ' checked';} echo ' value="false"/>NON </td></tr>';
 			echo '<tr><td colapse="2"><input type="submit" Value="Enregistrer les modifications"/></td></tr>';
 			echo '</table></form>';

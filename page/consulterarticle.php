@@ -51,7 +51,7 @@
 
 		$article=  $articleManager->getArticleWithId( $article->getNumeroArticle());
 
-		echo "<h1>".strtoupper($article->getTitre())."</h1>";
+		echo "<h1>".$article->getTitre()."</h1>";
 
 		echo "<img id='imageConsulterArticle' src='../image/articles/imageFond/".$article->getImage()."'/>";
 		echo "<p><u>Ecrit par ".$article->getAuteur().", le ".$article->getDatePoste()."</u></p>";

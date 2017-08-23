@@ -70,7 +70,7 @@
 			<input type="hidden" name="numeroarticle" value="<?php echo $_POST['numeroarticle']; ?>"/>
 			<input type="hidden" name="editer" value="true"/>
 
-			<input class="bouttonAjoutModificationArticle" type="submit" class="btn btn-default" id="envoyerArticle" value="Publier l'article"/>
+			<input type="submit" class="btn btn-default" value="Publier l'article"/>
 		</form>
 
 
