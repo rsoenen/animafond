@@ -22,9 +22,9 @@
 		if(isset($_POST['pseudo'])){ //Verification que le pseudo souhaité n'est pas déjà pris
 			$cond5 = $utilisateurManager ->pseudoAlreadyUse($_POST['pseudo']);
 			if ($cond5 == true){
-				$cond5 = false;
-			} else{
 				echo "<u><b>Le pseudo que vous voulez prendre est d&eacute;jà utiliser</b></u><br/>";
+			} else{
+				$cond5 = true;
 			}
 		}
 		$cond1=$cond2=$cond3=$cond4=true;
