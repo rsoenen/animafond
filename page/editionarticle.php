@@ -20,17 +20,19 @@
 	$articleManager->setDb($mainManager->getDb());
 
 	if(isset($_POST['numeroarticle'])&&(!isset($_POST['postezimage']))&&!isset($_POST['editer'])){
-
 		$article = new Article();
 		$article = $articleManager->getArticleWithId($_POST['numeroarticle']);
 	
 	}
-	if(isset($_POST['nomimage'])){
+	if(isset($_POST['nomimage']) && !isset($_POST['editer'])){
+
 		$nomImage = $mainManager->sendPicture($_POST['nomimage'], $mainManager->getPathPictureArticle(),'monfichier');
 
 		echo "POUR METTRE L'IMAGE, METTEZ DE CE CODE A L'ENDROIT OU VOUS VOULEZ VOTRE IMAGE : &lt;img src='".$mainManager->getPathPictureArticle().$nomImage."'/&gt;";
 
-	} else if (isset($_POST['editer'])&&isset($_POST['contenu'])&&isset($_POST['titre'])){ //ON ENREGISTRE L'ARTICLE
+	}
+
+	if (isset($_POST['editer'])&&isset($_POST['contenu'])&&isset($_POST['titre'])&&!isset($_POST['postezimage'])){ //ON ENREGISTRE L'ARTICLE
 
 		$updateArticle = new Article();
 		$updateArticle -> setNumeroArticle($_POST['numeroarticle']);
@@ -68,9 +70,8 @@
 			</div>
 
 			<input type="hidden" name="numeroarticle" value="<?php echo $_POST['numeroarticle']; ?>"/>
-			<input type="hidden" name="editer" value="true"/>
 
-			<input type="submit" class="btn btn-default" value="Publier l'article"/>
+			<input type="submit" class="btn btn-default"  name="editer" value="Publier l'article"/>
 		</form>
 
 

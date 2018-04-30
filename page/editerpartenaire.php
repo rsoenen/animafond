@@ -56,25 +56,24 @@
 			
 		}
 		if(isset($_POST['editer'])&&$_SESSION['gererPageDiverse']&&$_SESSION['gererPageDiverse']==true){ //UPDATE BDD AVEC CHANGEMENT IMAGE
-			
 			$partenaire = new Partenaire();
 			$partenaire -> updatePartenaire($_POST['nom'],$_POST['site'],$_POST['statut']);
-			
+			$partenaire -> setImage('monfichier');
 			$partenaireManager -> updatePartenaire($partenaire);
 			
-			echo "L'envoi a bien été effectué !";	
+			echo "L'envoi a bien été effectué !<br/>";
 			
 		}
 		
 		if(isset($_POST['suppartenaire'])&&$_SESSION['gererPageDiverse']&&$_SESSION['gererPageDiverse']==true){ //SUPPRIMER UN PARTENAIRE
-
+			echo "Image";
 			$partenaire = new Partenaire();
 			$partenaire -> setImage($_POST['image']);
 			$partenaire -> setNom($_POST['suppartenaire']);
 			
 			$partenaireManager -> deletePartenaire($partenaire);
 			
-			echo 'Le partenaire '.$partenaire.getNom().' a bien été supprimé';	
+			echo 'Le partenaire '.$partenaire.getNom().' a bien été supprimé<br/>';
 		}
 		
 		echo '<a href="index.php">Retourner à l\'accueil</a><br/>';

@@ -13,13 +13,13 @@
 <?php
 	if(isset($_POST['mailutilisateur'])&&isset($_POST["pseudo"])){
 
+		include ("../manager/UtilisateurManager.php");
+
 		$mail=$_POST['mailutilisateur'];
 		$utilisateurManager = new UtilisateurManager();
 		$utilisateurManager->setDb($mainManager->getDb());
 
-		$utilisateurManager->generateToken($_POST["pseudo"], $mail);
-
-
+		$cle = $utilisateurManager->generateToken($_POST["pseudo"], $mail);
 
 		//ENVOIE DU MESSAGE AVEC LA CLE GENERE
 		if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)){ //s'adapte aux diffÃƒÂ©rentes normes{

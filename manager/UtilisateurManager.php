@@ -79,6 +79,7 @@
             $q->bindParam(':mail',$mail, PDO::PARAM_STR);
             $q->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
             $q->execute();
+            return $cle;
         }
 
         public function updateMdpForget($newmdp, $cle){
@@ -104,8 +105,4 @@
             }
         }
 	}
-
-
-
-
-?>
+	?>
